@@ -1,65 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cine</title>
+    <link rel="stylesheet" href="/src/pantallas/home_page/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img source="" alt="">
+        <div class="navegacion-multicine">
+            <div class="logo">
+                <img src="/src/imagenes/img/multicineLogo.png" alt="Multicine Logo">
+            </div>
+            <nav class="menu-navegacion">
+                <ul>
+                    <li><a href="#" class="activo">Comprar entradas</a></li>
+                    <li><a href="#">CandyBar</a></li>
+                    <li><a href="#">Promociones</a></li>
+                    <li><a href="#">Más de Multicine</a></li>
+                </ul>
+            </nav>
         </div>
-        <!--1.navbar-->
-        <nav class="menu-navegacion">
-            <ul>
-                <li><a href="#" class="activo">Inicio</a></li>
-                <li><a href="#">CandyBar</a></li>
-                <li><a href="#">Promociones</a></li>
-                <li><a href="#"></a>Mas de Multicine</li>
-            </ul>
-        </nav>
-
-        <div class="usuario-ciudad">
-            <!-- Botón selección de ciudad-->
-            <a href="#" class="btn-ciudad">Santa Cruz</a>
-        </div>
-
-        <div class="usuario-sesion">
-            <a href="" class="btn-sesion">Inicio Sesion</a>
-        </div>
+        
+        <div class="opciones-usuario">
+            <div class="usuario-ciudad">
+                <div class="ubicacion-icon">
+                    <img src="/src/imagenes/icons/ubicacion.svg" alt="Icono de ubicación">
+                </div>
+                <a href="#" class="btn-ciudad">Santa Cruz</a>
+            </div>
+            <div class="multicine-usuario">
+                <div class="compras-icon">
+                    <img src="/src/imagenes/icons/carrito.svg" alt="Icono de carrito">
+                </div>
+                <div class="usuario-sesion">
+                    <a href="" class="btn-sesion">Iniciar sesión</a>
+                </div>
+            </div>
+        </div>    
     </header>
-    <!-- 2. hero seccion-->
-    <section class="hero-pelicula">
-        <div class="hero-contenido">
-            <span class="badge-estreno">ESTRENO DE LA SEMANA</span>
-            <h1 class="hero-titulo">DOLLY: JUEGA CONMIGO</h1>
+
+    <section class="pelicula-destacada">
+        <div class="destacada-contenido">
+            <div class="texto-estreno">
+                <span class="badge-estreno">ESTRENO DE LA SEMANA</span>
+            </div>
+            <h1 class="destacada-titulo">DOLLY: JUEGA CONMIGO</h1>
             
-            <div class="hero-meta">
-                <span class="duracion">1h 35m</span>
-                <span class="clasificacion">14+</span>
-                <span class="genero">Terror / Suspenso</span>
+            <div class="destacada-info">
+                <div class="caja-duracion">
+                    <img src="/src/imagenes/icons/duracion.svg" alt="Icono de duración">
+                    <span class="duracion">1h 35m</span>
+                </div>
+                <div class="caja-clasificacion">
+                    <span class="clasificacion">14+</span>
+                </div>
+                <div class="caja-genero">
+                    <span class="genero">Terror / Suspenso</span>
+                </div>
             </div>
 
-            <p class="hero-sinopsis">
+            <p class="destacada-sinopsis">
                 Un grupo de amigos libera accidentalmente una entidad demoníaca atrapada en una muñeca de porcelana. Ahora, deberán sobrevivir a una noche de juegos mortales donde cada movimiento podría ser el último.
             </p>
 
-            <div class="hero-botones">
-                <a href="#" class="btn-comprar">Comprar entradas</a>
-                <a href="#" class="btn-trailer">Reproducir tráiler</a>
+            <div class="destacada-botones">
+                <div class="btn-comprar-entrada">
+                    <img src="/src/imagenes/icons/entrada.svg" alt="Icono de entrada">
+                    <a href="#" class="btn-comprar">Comprar entradas</a>
+                </div>
+
+                <div class="btn-reproducir-trailer">
+                    <img src="/src/imagenes/icons/play.svg" alt="Icono de play">
+                    <a href="#" class="btn-trailer">Reproducir tráiler</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- 3. SECCIÓN: CARTELERA -->
     <section class="seccion-cartelera">
         <div class="seccion-header">
             <div>
                 <h2>Cartelera</h2>
                 <p>Películas exclusivas en todas nuestras salas.</p>
             </div>
-            <!-- Iconos de vista de cuadrícula o lista del Figma a la derecha -->
+            
             <div class="vistas-control">
                 <button class="btn-vista layout-grid">Grid</button>
                 <button class="btn-vista layout-list">List</button>
@@ -67,50 +93,43 @@
         </div>
 
         <div class="grid-peliculas">
-            <!-- Tarjeta de Película 1 -->
             <article class="tarjeta-pelicula">
                 <div class="poster-contenedor">
-                    <img src="" alt="Película 1">
+                    <img src="/src/imagenes/img/pelicula1.png" alt="Película 1">
                     <span class="badge-edad">14+</span>
                 </div>
-                
             </article>
 
-            <!-- Tarjeta de Película 2 -->
             <article class="tarjeta-pelicula">
                 <div class="poster-contenedor">
-                    <img src="" alt="Película 2">
+                    <img src="/src/imagenes/img/pelicula2.png" alt="Película 2">
                     <span class="badge-edad">TP</span>
                 </div>
             </article>
 
-            <!-- Tarjeta de Película 3 -->
             <article class="tarjeta-pelicula">
                 <div class="poster-contenedor">
-                    <img src="" alt="Película 3">
+                    <img src="/src/imagenes/img/pelicula3.png" alt="Película 3">
                     <span class="badge-edad">14+</span>
                 </div>
             </article>
 
-            <!-- Tarjeta de Película 4  -->
             <article class="tarjeta-pelicula">
                 <div class="poster-contenedor">
-                    <img src="" alt="Película 4">
+                    <img src="/src/imagenes/img/pelicula4.png" alt="Película 4">
                     <span class="badge-edad">14+</span>
                 </div>
             </article>
 
-            <!-- Tarjeta de Película 5  -->
             <article class="tarjeta-pelicula">
                 <div class="poster-contenedor">
-                    <img src="" alt="Película 5">
+                    <img src="/src/imagenes/img/pelicula5.png" alt="Película 5">
                     <span class="badge-edad">TP</span>
                 </div>
             </article>
         </div>
     </section>
 
-    <!-- 4. SECCIÓN: MUY PRONTO / PREVENTAS -->
     <section class="seccion-preventas">
         <div class="seccion-header">
             <h2>Muy Pronto / Preventas</h2>
@@ -118,10 +137,9 @@
         </div>
 
         <div class="grid-preventas">
-            <!-- Tarjeta 1: Supergirl Legacy -->
             <article class="tarjeta-preventa">
                 <div class="poster-contenedor">
-                    <img src="" alt="Supergirl: Legacy">
+                    <img src="/src/imagenes/img/estreno1.png" alt="Supergirl: Legacy">
                     <span class="badge-preventa">PREVENTA</span>
                 </div>
                 <div class="info-preventa">
@@ -130,10 +148,9 @@
                 </div>
             </article>
 
-            <!-- Tarjeta 2: Toy Story 5 -->
             <article class="tarjeta-preventa">
                 <div class="poster-contenedor">
-                    <img src="" alt="Toy Story 5">
+                    <img src="/src/imagenes/img/estreno2.png" alt="Toy Story 5">
                 </div>
                 <div class="info-preventa">
                     <h3>Toy Story 5</h3>
@@ -141,10 +158,9 @@
                 </div>
             </article>
 
-            <!-- Tarjeta 3: Jackass Final -->
             <article class="tarjeta-preventa">
                 <div class="poster-contenedor">
-                    <img src="" alt="Jackass: Final">
+                    <img src="/src/imagenes/img/estreno3.png" alt="Jackass: Final">
                 </div>
                 <div class="info-preventa">
                     <h3>Jackass: Final</h3>
@@ -152,10 +168,9 @@
                 </div>
             </article>
 
-            <!-- Tarjeta 4: Minions & Monstruos -->
             <article class="tarjeta-preventa">
                 <div class="poster-contenedor">
-                    <img src="" alt="Minions & Monstruos">
+                    <img src="/src/imagenes/img/estreno4.png" alt="Minions & Monstruos">
                 </div>
                 <div class="info-preventa">
                     <h3>Minions &amp; Monstruos</h3>
@@ -165,11 +180,9 @@
         </div>
     </section>
 
-    <!-- 5. SECCIÓN PROMO / EXPERIENCIAS Y CLUB -->
     <section class="seccion-experiencias">
         <div class="contenedor-columnas-promo">
             
-            <!-- Columna Izquierda: Experiencia VIP -->
             <div class="bloque-vip">
                 <div class="vip-contenido">
                     <h2>Experiencia VIP</h2>
@@ -178,7 +191,6 @@
                 </div>
             </div>
 
-            <!-- Columna Derecha: Club Multicine  -->
             <div class="bloque-club">
                 <div class="club-contenido">
                     <!-- Icono de regalo arriba -->
@@ -188,17 +200,13 @@
                     <a href="#" class="btn-unirme">Unirme ahora</a>
                 </div>
             </div>
-
         </div>
     </section>
 
-    <!-- 6. PIE DE PÁGINA (FOOTER) -->
     <footer>
         <div class="footer-principal">
-            
-            <!-- Columna 1: Información Marca -->
             <div class="footer-col-info">
-                <img src="" alt="Multicine Logo" class="logo-footer">
+                <img src="/src/imagenes/img/multicineLogo.png" alt="Multicine Logo" class="logo-footer">
                 <p class="descripcion-cine">
                     Multicine es la cadena líder en entretenimiento en Bolivia, ofreciendo la mejor tecnología en imagen y sonido para una experiencia inolvidable.
                 </p>
@@ -208,7 +216,6 @@
                 </div>
             </div>
 
-            <!-- Columna 2: Navegación -->
             <div class="footer-col-links">
                 <h3>Navegación</h3>
                 <ul>
@@ -219,7 +226,6 @@
                 </ul>
             </div>
 
-            <!-- Columna 3: Legal -->
             <div class="footer-col-links">
                 <h3>Legal</h3>
                 <ul>
@@ -230,7 +236,6 @@
                 </ul>
             </div>
 
-            <!-- Columna 4: Suscríbete  -->
             <div class="footer-col-suscribe">
                 <h3>Suscríbete</h3>
                 <p>Recibe las últimas noticias y ofertas exclusivas directamente en tu correo.</p>
@@ -242,11 +247,9 @@
 
         </div>
 
-        <!-- Barra inferior de Derechos Reservados -->
         <div class="footer-derechos">
             <p>&copy; 2026 Multicine. Reservados todos los derechos.</p>
         </div>
     </footer>
-
 </body>
 </html>

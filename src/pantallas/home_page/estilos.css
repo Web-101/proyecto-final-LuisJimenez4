@@ -1,0 +1,354 @@
+:root{
+  --hero-img: url('/src/imagenes/img/fondo.png');
+}
+
+*{box-sizing:border-box}
+html,body{
+  height:100%
+}
+body{
+  margin:0;
+  font-family: 'Inter', sans-serif;
+  background:linear-gradient(180deg,#050506 0%, #0b0b0d 100%);
+  color:white;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.4;
+}
+
+.container{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 16px;
+}
+
+header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:16px 64px;
+  border-bottom:1px solid rgba(255,255,255,0.03);
+}
+
+.navegacion-multicine, .opciones-usuario{
+  display:flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content:space-between;
+  gap:48px;
+}
+.logo img{
+  height:44px; display:block; object-fit:contain
+}
+.menu-navegacion ul{
+  display:flex;
+  gap:32px;
+  list-style:none;
+  margin:0;
+  padding:0;
+  align-items:center;
+}
+.menu-navegacion a{
+  color: #D0C6AB;
+  text-decoration:none;
+  font-weight:400;
+  font-size:12px;
+  padding:0;
+}
+.menu-navegacion a.activo{
+  color:#FFEDB2;
+  font-weight: bold;
+  border-bottom: 2px solid #FFEDB2;
+}
+.opciones-usuario{
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+.usuario-ciudad{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 8px 16px;
+  align-items: center;
+}
+.ubicacion-icon{
+  height: 16px;
+}
+.usuario-ciudad, .usuario-sesion {
+  display:inline-block;
+  padding:8px 16px;
+  border-radius:8px;
+  align-items: center;
+  background:transparent;
+  border:1px solid rgba(255,255,255,0.04);
+}
+.usuario-ciudad .btn-ciudad{
+  color: white;
+  font-weight: 200px;
+  font-size: 12px;
+  text-decoration: none;
+}
+.multicine-usuario{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+.compras-icon{
+  width: 20px;
+  height: 20px;
+}
+.usuario-sesion{
+  background:#F5CF0B;
+}
+.usuario-sesion .btn-sesion{
+  text-decoration: none;
+  font-weight:bold;
+  color:#6A5800;
+  border:none;
+}
+
+.pelicula-destacada{
+  position:relative;
+  min-height:62vh;
+  display:flex;
+  align-items:center;
+  color:white;
+  margin-bottom:36px;
+  background-image: var(--hero-img);
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+.pelicula-destacada::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg, rgba(2,2,3,0.6) 10%, rgba(2,2,3,0.85) 70%);
+  z-index:1;
+}
+
+.destacada-contenido{
+  position:relative;
+  display: flex;
+  flex-direction: column;
+  z-index:2;
+  max-width:900px;
+  padding:48px 16px;
+  margin-left:16px;
+}
+
+.badge-estreno{
+  background:rgba(255,255,255,0.06);
+  color:white;
+  padding:6px 10px;
+  border-radius:999px;
+  font-weight:700;
+  font-size:0.8rem;
+  letter-spacing:0.6px;
+}
+.destacada-titulo{
+  margin:8px 0 12px 0;
+  font-size:2.6rem;
+  letter-spacing:-1.12px;
+  color:#FFE16C;
+  text-transform:uppercase;
+  font-weight:800;
+  text-shadow: 0 6px 18px rgba(0,0,0,0.7);
+}
+.destacada-info{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:#D0C6AB;
+  margin-bottom:18px;
+  font-weight:600;
+}
+.caja-duracion, .caja-clasificacion, .caja-genero{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  padding:6px 10px;
+  font-size:12px;
+}
+.caja-duracion{
+  font-weight: 300;
+}
+.caja-clasificacion{
+  padding:8px 14px;
+  border-radius: 4px;
+  border: 1px solid #D0C6AB;
+}
+
+.destacada-sinopsis{
+  color:rgba(255,255,255,0.88);
+  max-width:70%;
+  margin-bottom:20px;
+  font-size:1rem;
+}
+
+.destacada-botones{display:flex; gap:16px}
+
+.btn-comprar-entrada, .btn-reproducir-trailer{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:12px 18px;
+  border-radius:10px;
+  font-weight:700;
+  transition:transform .12s ease, box-shadow .12s ease;
+}
+.btn-comprar-entrada{
+  background:#F5CF0B;
+  color:#fff;
+  box-shadow: 0 8px 20px rgba(255,107,0,0.18);
+}
+.btn-comprar-entrada:hover{transform:translateY(-3px)}
+
+.btn-reproducir-trailer{
+  background:transparent;
+  color:white;
+  border:1px solid rgba(255,255,255,0.08);
+}
+.btn-reproducir-trailer:hover{transform:translateY(-3px)}
+
+.seccion-cartelera{
+  padding:28px 16px;
+  margin-bottom:28px;
+}
+.seccion-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  margin-bottom:18px;
+}
+.seccion-header h2{margin:0; font-size:1.4rem}
+.seccion-header p{margin:0; color:#D0C6AB; font-size:0.95rem}
+
+/* Controles de vista */
+.vistas-control{display:flex; gap:8px}
+.btn-vista{
+  background:transparent;
+  border:1px solid rgba(255,255,255,0.04);
+  color:var(--muted);
+  padding:8px 10px;
+  border-radius:8px;
+}
+
+/* Grid de películas */
+.grid-peliculas{
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap:16px;
+  align-items:start;
+}
+.tarjeta-pelicula{
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  transition:transform .15s ease, box-shadow .15s ease;
+}
+.tarjeta-pelicula:hover{transform:translateY(-6px); box-shadow: 0 18px 40px rgba(2,6,23,0.6)}
+.poster-contenedor{position:relative}
+.poster-contenedor img{width:100%; height:240px; object-fit:cover; display:block}
+.badge-edad{
+  position:absolute;
+  left:10px;
+  top:10px;
+  background:rgba(0,0,0,0.6);
+  color:var(--white);
+  padding:6px 8px;
+  border-radius:6px;
+  font-weight:800;
+  font-size:0.85rem;
+}
+
+/* SECCIÓN: PREVENTAS */
+.seccion-preventas{padding:28px 16px; margin-bottom:28px}
+.grid-preventas{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap:16px;
+}
+.tarjeta-preventa{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  align-items:center;
+  background:var(--card);
+  padding:12px;
+  border-radius:12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+}
+.tarjeta-preventa .poster-contenedor img{width:110px; height:150px; object-fit:cover; border-radius:8px}
+.info-preventa h3{margin:0 0 6px 0; font-size:1.05rem}
+.fecha-estreno{color:var(--muted); font-weight:600}
+
+/* SECCIÓN: EXPERIENCIAS / CLUB */
+.seccion-experiencias{padding:28px var(--container-padding); margin-bottom:36px}
+.contenedor-columnas-promo{
+  display:grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap:16px;
+}
+.bloque-vip{
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius:12px;
+  padding:24px;
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  min-height:180px;
+}
+.bloque-club{
+  background:linear-gradient(90deg, rgba(255,212,64,0.06), rgba(255,255,255,0.02));
+  border-radius:12px;
+  padding:20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:180px;
+}
+.bloque-club .icono-regalo{font-size:28px; margin-bottom:8px}
+
+/* FOOTER */
+footer{
+  margin-top:40px;
+  background:linear-gradient(180deg,#070708,#0b0b0d);
+  color:var(--muted);
+  padding:28px var(--container-padding);
+}
+.footer-principal{
+  display:grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap:20px;
+  max-width:var(--max-width);
+  margin:0 auto;
+}
+.footer-col-info .logo-footer{height:44px; margin-bottom:12px}
+.footer-col-links h3,
+.footer-col-suscribe h3{color:white; margin-bottom:8px}
+.footer-col-links ul{list-style:none; padding:0; margin:0}
+.footer-col-links a{color:var(--muted); text-decoration:none; display:block; padding:6px 0}
+.footer-derechos{border-top:1px solid rgba(255,255,255,0.03); margin-top:18px; padding-top:12px; text-align:center; color:rgba(255,255,255,0.45)}
+
+.form-suscribirse{display:flex; gap:8px}
+.form-suscribirse input{
+  padding:10px 12px;
+  border-radius:8px;
+  border:1px solid rgba(255,255,255,0.06);
+  background:transparent;
+  color:white;
+}
+.form-suscribirse button{
+  padding:10px 14px;
+  border-radius:8px;
+  border:none;
+  background:var(--accent);
+  color:#0b0b0b;
+  font-weight:800;
+}
