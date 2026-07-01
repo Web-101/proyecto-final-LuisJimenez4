@@ -67,21 +67,20 @@ header{
   gap: 24px;
 }
 .usuario-ciudad{
-  display: flex;
-  flex-direction: row;
   gap: 10px;
   padding: 8px 16px;
   align-items: center;
+  background-color: #6B7280;
 }
 .ubicacion-icon{
   height: 16px;
 }
 .usuario-ciudad, .usuario-sesion {
-  display:inline-block;
+  display:flex;
+  flex-direction: row;
   padding:8px 16px;
   border-radius:8px;
   align-items: center;
-  background:transparent;
   border:1px solid rgba(255,255,255,0.04);
 }
 .usuario-ciudad .btn-ciudad{
@@ -105,6 +104,7 @@ header{
 }
 .usuario-sesion .btn-sesion{
   text-decoration: none;
+  font-size: 12px;
   font-weight:bold;
   color:#6A5800;
   border:none;
@@ -278,7 +278,7 @@ header{
   flex-direction:column;
   gap:12px;
   align-items:center;
-  background:var(--card);
+  background:#0F1113;
   padding:12px;
   border-radius:12px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.6);
