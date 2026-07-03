@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cartelera (Homepage)</title>
-    <link rel="stylesheet" href="/css/estilos.css">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/header.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="navegacion-multicine">
             <div class="logo">
-                <img src="/assets/img/multicineLogo.png" alt="Multicine Logo">
+                <img src="../assets/img/multicineLogo.png" alt="Multicine Logo">
             </div>
             <nav class="menu-navegacion">
                 <ul>
@@ -26,13 +27,13 @@
         <div class="opciones-usuario">
             <div class="usuario-ciudad">
                 <div class="ubicacion-icon">
-                    <img src="/assets/icons/ubicacion.svg" alt="Icono de ubicación">
+                    <img src="../assets/icons/ubicacion.svg" alt="Icono de ubicación">
                 </div>
                 <a href="#" class="btn-ciudad">Santa Cruz</a>
             </div>
             <div class="multicine-usuario">
                 <div class="compras-icon">
-                    <img src="/assets/icons/carrito.svg" alt="Icono de carrito">
+                    <img src="../assets/icons/carrito.svg" alt="Icono de carrito">
                 </div>
                 <div class="usuario-sesion">
                     <a href="" class="btn-sesion">Iniciar sesión</a>
@@ -40,8 +41,8 @@
             </div>
         </div>    
     </header>
-
-    <section class="pelicula-destacada">
+    <main>
+        <section class="pelicula-destacada">
         <div class="destacada-contenido">
             <div class="texto-estreno">
                 <span class="badge-estreno">ESTRENO DE LA SEMANA</span>
@@ -50,7 +51,7 @@
             
             <div class="destacada-info">
                 <div class="caja-duracion">
-                    <img src="/assets/icons/duracion.svg" alt="Icono de duración">
+                    <img src="../assets/icons/duracion.svg" alt="Icono de duración">
                     <span class="duracion">1h 35m</span>
                 </div>
                 <div class="caja-clasificacion">
@@ -67,154 +68,154 @@
 
             <div class="destacada-botones">
                 <div class="btn-comprar-entrada">
-                    <img src="/assets/icons/entrada.svg" alt="Icono de entrada">
-                    <a href="#" class="btn-comprar">Comprar entradas</a>
+                    <img src="../assets/icons/entrada.svg" alt="Icono de entrada">
+                    <a href="../pantallas/funciones.html" class="btn-comprar">IR A PANTALLA FUNCIONES</a>
                 </div>
 
                 <div class="btn-reproducir-trailer">
-                    <img src="/assets/icons/play.svg" alt="Icono de play">
+                    <img src="../assets/icons/play.svg" alt="Icono de play">
                     <a href="#" class="btn-trailer">Reproducir tráiler</a>
                 </div>
             </div>
         </div>
-    </section>
+        </section>
 
-    <section class="seccion-cartelera">
-        <div class="seccion-header">
-            <div>
-                <h2>Cartelera</h2>
-                <p>Películas exclusivas en todas nuestras salas.</p>
-            </div>
-            
-            <div class="vistas-control">
-                <button class="btn-vista layout-grid"><img src="/assets/icons/vista.svg"></button>
-                <button class="btn-vista layout-list"><img src="/assets/icons/filtros.svg"></button>
-            </div>
-        </div>
-
-        <div class="grid-peliculas">
-            <article class="tarjeta-pelicula">
-                <div class="poster-contenedor">
-                    <img src="/assets/img/pelicula1.png" alt="Película 1">
-                    <span class="badge-edad">14+</span>
+        <section class="seccion-cartelera">
+            <div class="seccion-header">
+                <div>
+                    <h2>Cartelera</h2>
+                    <p>Películas exclusivas en todas nuestras salas.</p>
                 </div>
-            </article>
-
-            <article class="tarjeta-pelicula">
-                <div class="poster-contenedor">
-                    <img src="/assets/img/pelicula2.png" alt="Película 2">
-                    <span class="badge-edad">TP</span>
-                </div>
-            </article>
-
-            <article class="tarjeta-pelicula">
-                <div class="poster-contenedor">
-                    <img src="/assets/img/pelicula3.png" alt="Película 3">
-                    <span class="badge-edad">14+</span>
-                </div>
-            </article>
-
-            <article class="tarjeta-pelicula">
-                <div class="poster-contenedor">
-                    <img src="/assets/img/pelicula4.png" alt="Película 4">
-                    <span class="badge-edad">14+</span>
-                </div>
-            </article>
-
-            <article class="tarjeta-pelicula">
-                <div class="poster-contenedor">
-                    <img src="/assets/img/pelicula5.png" alt="Película 5">
-                    <span class="badge-edad">TP</span>
-                </div>
-            </article>
-        </div>
-    </section>
-
-    <section class="seccion-preventas">
-        <div class="seccion-header">
-            <h2>Muy Pronto / Preventas</h2>
-            <a href="#" class="enlace-ver-todos">Ver todos &gt;</a>
-        </div>
-
-        <div class="grid-preventas">
-            <article class="tarjeta-preventa">
-                <div class="poster-contenedor">
-                    <img src="/assets/img/estreno1.png" alt="Supergirl: Legacy">
-                    <span class="badge-preventa">PREVENTA</span>
-                </div>
-                <div class="info-preventa">
-                    <h3>Supergirl: Legacy</h3>
-                    <p class="fecha-estreno">25 Junio, 2026</p>
-                </div>
-            </article>
-
-            <article class="tarjeta-preventa">
-                <div class="poster-contenedor">
-                    <img src="/assets/img/estreno2.png" alt="Toy Story 5">
-                </div>
-                <div class="info-preventa">
-                    <h3>Toy Story 5</h3>
-                    <p class="fecha-estreno">15 Julio, 2026</p>
-                </div>
-            </article>
-
-            <article class="tarjeta-preventa">
-                <div class="poster-contenedor">
-                    <img src="/assets/img/estreno3.png" alt="Jackass: Final">
-                </div>
-                <div class="info-preventa">
-                    <h3>Jackass: Final</h3>
-                    <p class="fecha-estreno">20 Agosto, 2026</p>
-                </div>
-            </article>
-
-            <article class="tarjeta-preventa">
-                <div class="poster-contenedor">
-                    <img src="/assets/img/estreno4.png" alt="Minions & Monstruos">
-                </div>
-                <div class="info-preventa">
-                    <h3>Minions &amp; Monstruos</h3>
-                    <p class="fecha-estreno">12 Septiembre, 2026</p>
-                </div>
-            </article>
-        </div>
-    </section>
-
-    <section class="seccion-experiencias">
-        <div class="contenedor-columnas-promo">
-            
-            <div class="bloque-vip">
-                <div class="vip-contenido">
-                    <h2>Experiencia VIP</h2>
-                    <p>Disfruta de la mejor tecnología Fiber y sonido envolvente con la comodidad de nuestras butacas reclinables de cuero.</p>
-                    <a href="#" class="btn-descubrir">Descubrir más</a>
+                
+                <div class="vistas-control">
+                    <button class="btn-vista layout-grid"><img src="../assets/icons/vista.svg"></button>
+                    <button class="btn-vista layout-list"><img src="../assets/icons/filtros.svg"></button>
                 </div>
             </div>
 
-            <div class="bloque-club">
-                <div class="club-contenido">
-                    <!-- Icono de regalo arriba -->
-                    <div class="icono-regalo">
-                        <img src="/assets/icons/club.svg" alt="regalo-icon">
-                    </div> 
-                    <h2>Club Multicine</h2>
-                    <p>Acumula puntos en cada compra y canjéalos por entradas gratis y combos del Candy Bar.</p>
-                    <a href="#" class="btn-unirme">Unirme ahora</a>
+            <div class="grid-peliculas">
+                <article class="tarjeta-pelicula">
+                    <div class="poster-contenedor">
+                        <img src="../assets/img/pelicula1.png" alt="Película 1">
+                        <span class="badge-edad">14+</span>
+                    </div>
+                </article>
+
+                <article class="tarjeta-pelicula">
+                    <div class="poster-contenedor">
+                        <img src="../assets/img/pelicula2.png" alt="Película 2">
+                        <span class="badge-edad">TP</span>
+                    </div>
+                </article>
+
+                <article class="tarjeta-pelicula">
+                    <div class="poster-contenedor">
+                        <img src="../assets/img/pelicula3.png" alt="Película 3">
+                        <span class="badge-edad">14+</span>
+                    </div>
+                </article>
+
+                <article class="tarjeta-pelicula">
+                    <div class="poster-contenedor">
+                        <img src="../assets/img/pelicula4.png" alt="Película 4">
+                        <span class="badge-edad">14+</span>
+                    </div>
+                </article>
+
+                <article class="tarjeta-pelicula">
+                    <div class="poster-contenedor">
+                        <img src="../assets/img/pelicula5.png" alt="Película 5">
+                        <span class="badge-edad">TP</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="seccion-preventas">
+            <div class="seccion-header">
+                <h2>Muy Pronto / Preventas</h2>
+                <a href="#" class="enlace-ver-todos">Ver todos &gt;</a>
+            </div>
+
+            <div class="grid-preventas">
+                <article class="tarjeta-preventa">
+                    <div class="poster-contenedor">
+                        <img src="../assets/img/estreno1.png" alt="Supergirl: Legacy">
+                        <span class="badge-preventa">PREVENTA</span>
+                    </div>
+                    <div class="info-preventa">
+                        <h3>Supergirl: Legacy</h3>
+                        <p class="fecha-estreno">25 Junio, 2026</p>
+                    </div>
+                </article>
+
+                <article class="tarjeta-preventa">
+                    <div class="poster-contenedor">
+                        <img src="../assets/img/estreno2.png" alt="Toy Story 5">
+                    </div>
+                    <div class="info-preventa">
+                        <h3>Toy Story 5</h3>
+                        <p class="fecha-estreno">15 Julio, 2026</p>
+                    </div>
+                </article>
+
+                <article class="tarjeta-preventa">
+                    <div class="poster-contenedor">
+                        <img src="../assets/img/estreno3.png" alt="Jackass: Final">
+                    </div>
+                    <div class="info-preventa">
+                        <h3>Jackass: Final</h3>
+                        <p class="fecha-estreno">20 Agosto, 2026</p>
+                    </div>
+                </article>
+
+                <article class="tarjeta-preventa">
+                    <div class="poster-contenedor">
+                        <img src="../assets/img/estreno4.png" alt="Minions & Monstruos">
+                    </div>
+                    <div class="info-preventa">
+                        <h3>Minions &amp; Monstruos</h3>
+                        <p class="fecha-estreno">12 Septiembre, 2026</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="seccion-experiencias">
+            <div class="contenedor-columnas-promo">
+                
+                <div class="bloque-vip">
+                    <div class="vip-contenido">
+                        <h2>Experiencia VIP</h2>
+                        <p>Disfruta de la mejor tecnología Fiber y sonido envolvente con la comodidad de nuestras butacas reclinables de cuero.</p>
+                        <a href="#" class="btn-descubrir">Descubrir más</a>
+                    </div>
+                </div>
+
+                <div class="bloque-club">
+                    <div class="club-contenido">
+                        <div class="icono-regalo">
+                            <img src="../assets/icons/club.svg" alt="regalo-icon">
+                        </div> 
+                        <h2>Club Multicine</h2>
+                        <p>Acumula puntos en cada compra y canjéalos por entradas gratis y combos del Candy Bar.</p>
+                        <a href="#" class="btn-unirme">Unirme ahora</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
+    </main>
     <footer>
         <div class="footer-principal">
             <div class="footer-col-info">
-                <img src="/assets/img/multicineLogo.png" alt="Multicine Logo" class="logo-footer">
+                <img src="../assets/img/multicineLogo.png" alt="Multicine Logo" class="logo-footer">
                 <p class="descripcion-cine">
                     Multicine es la cadena líder en entretenimiento en Bolivia, ofreciendo la mejor tecnología en imagen y sonido para una experiencia inolvidable.
                 </p>
                 <div class="redes-sociales">
-                    <a href="#" aria-label="Twitter"><img src="/assets/icons/twitter.svg" alt="Icono de Twitter"></a>
-                    <a href="#" aria-label="Instagram"><img src="/assets/icons/instagram.svg" alt="Icono de Twitter" class="logo-instagram"></a>
+                    <a href="#" aria-label="Twitter"><img src="../assets/icons/twitter.svg" alt="Icono de Twitter"></a>
+                    <a href="#" aria-label="Instagram"><img src="../assets/icons/instagram.svg" alt="Icono de Twitter" class="logo-instagram"></a>
                 </div>
             </div>
 

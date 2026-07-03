@@ -1,11 +1,201 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>| Pagos</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>| Pagos</title>
+  <link rel="stylesheet" href="../css/pagos.css" />
+  <link rel="stylesheet" href="../css/header.css">
 </head>
 <body>
-    
+    <header>
+        <div class="navegacion-multicine">
+            <div class="logo">
+                <img src="../assets/img/multicineLogo.png" alt="Multicine Logo">
+            </div>
+            <nav class="menu-navegacion">
+                <ul>
+                    <li><a href="#" class="activo">Comprar entradas</a></li>
+                    <li><a href="#">CandyBar</a></li>
+                    <li><a href="#">Promociones</a></li>
+                    <li><a href="#">Más de Multicine</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="opciones-usuario">
+            <div class="usuario-ciudad">
+                <div class="ubicacion-icon">
+                    <img src="../assets/icons/ubicacion.svg" alt="Icono de ubicación">
+                </div>
+                <a href="#" class="btn-ciudad">Santa Cruz</a>
+            </div>
+            <div class="multicine-usuario">
+                <div class="compras-icon">
+                    <img src="../assets/icons/carrito.svg" alt="Icono de carrito">
+                </div>
+                <div class="usuario-sesion">
+                    <a href="" class="btn-sesion">Iniciar sesión</a>
+                </div>
+            </div>
+        </div>    
+    </header>
+    <main class="contenedor pago-layout" role="main">
+        <!-- Formulario principal -->
+        <section class="formulario-pago" aria-labelledby="titulo-pago">
+            <h2 id="titulo-pago">PAGO</h2>
+
+            <!-- Método de pago -->
+            <fieldset class="metodo-pago" aria-label="Método de pago">
+                <legend>Selecciona método de pago</legend>
+                <label class="radio">
+                    <input type="radio" name="metodo" value="tarjeta" checked />
+                    <span>Tarjeta</span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="metodo" value="qr" />
+                    <span>QR Code</span>
+                </label>
+            </fieldset>
+
+            <!-- Datos de la reserva -->
+            <form id="form-pago" class="datos-reserva" autocomplete="on" novalidate>
+                <h3>COMPLETA TUS DATOS PARA LA RESERVA</h3>
+
+                <div class="fila">
+                    <div class="campo">
+                        <input id="nombre" name="nombre" type="text" required placeholder="Nombre*"/>
+                    </div>
+                    <div class="campo">
+                        <input id="apellido" name="apellido" type="text" required placeholder="Apellido*"/>
+                    </div>
+                </div>
+
+                <div class="fila">
+                    <div class="campo">
+                        <input id="documento" name="documento" type="text" inputmode="numeric" required placeholder="Número de documento*"/>
+                    </div>
+                    <div class="campo">
+                        <input id="celular" name="celular" type="tel" inputmode="tel" required placeholder="Celular*"/>
+                    </div>
+                </div>
+
+                <div class="fila">
+                    <div class="campo ancho-completo">
+                        <input id="email" name="email" type="email" required placeholder="Correo electrónico*"/>
+                    </div>
+                </div>
+            </form>
+
+                <!-- Datos para factura -->
+            <form class="datos-factura" aria-label="Datos para la factura">
+                <h3>DATOS PARA LA FACTURA</h3>
+
+                <div class="fila">
+                    <div class="campo">
+                        <input id="nit" name="nit" type="text" placeholder="Número de NIT o Carnet de Identidad (C.I)*"/>
+                    </div>
+                    <div class="campo">
+                        <input id="complemento" name="complemento" type="text" placeholder="Complemento CI (Opcional)"/>
+                    </div>
+                </div>
+
+                <div class="fila">
+                    <div class="campo ancho-completo">
+                        <input id="razon" name="razon" type="text" placeholder="Nombre o Razón Social*"/>
+                    </div>
+                </div>
+            </form>
+
+                <!-- Campos específicos para tarjeta (visibles solo si se elige tarjeta) -->
+                <div class="tarjeta-campos" aria-hidden="false">
+                <h4>Datos de tarjeta</h4>
+                <div class="fila">
+                    <div class="campo">
+                    <label for="numero-tarjeta">Número de tarjeta</label>
+                    <input id="numero-tarjeta" name="numero-tarjeta" type="text" inputmode="numeric" maxlength="19" />
+                    </div>
+                    <div class="campo">
+                    <label for="vencimiento">Vencimiento (MM/AA)</label>
+                    <input id="vencimiento" name="vencimiento" type="text" inputmode="numeric" maxlength="5" placeholder="MM/AA" />
+                    </div>
+                    <div class="campo">
+                    <label for="cvv">CVV</label>
+                    <input id="cvv" name="cvv" type="password" inputmode="numeric" maxlength="4" />
+                    </div>
+                </div>
+                <div class="fila">
+                    <div class="campo ancho-completo">
+                    <label for="titular">Nombre del titular</label>
+                    <input id="titular" name="titular" type="text" />
+                    </div>
+                </div>
+                </div>
+
+                <!-- Botón principal -->
+                <div class="acciones-form">
+                <button type="submit" class="boton finalizar">FINALIZAR COMPRA</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Resumen de la reserva -->
+        <aside class="resumen-reserva" aria-labelledby="titulo-resumen">
+        <h3 id="titulo-resumen">TU RESERVA</h3>
+
+        <div class="resumen-card">
+            <div class="resumen-pelicula">
+            <div class="mini-poster" aria-hidden="true"></div>
+            <div class="info">
+                <p class="titulo-pelicula"><strong>Dolly: Juega Conmigo</strong></p>
+                <p class="detalle">Multicine Cine Center · Mié, 19 Jun · 19:00</p>
+                <p class="sala">Sala: Sala 5</p>
+            </div>
+            </div>
+
+            <div class="resumen-asientos">
+            <strong>Asientos</strong>
+            <ul id="lista-asientos">
+                <li>F5</li>
+                <li>G1</li>
+            </ul>
+            </div>
+
+            <div class="resumen-precio">
+            <span class="label">Total a pagar</span>
+            <span class="monto">Bs. <strong>70.00</strong></span>
+            </div>
+
+            <div class="nota">
+            <small>Al confirmar, serás redirigido al procesador de pagos seleccionado.</small>
+            </div>
+        </div>
+        </aside>
+    </main>
+    <footer class="pie">
+        <div class="contenedor">
+        <small>© MULTICINE</small>
+        </div>
+    </footer>
+
+    <script>
+        // Comportamiento mínimo: alternar campos según método de pago
+        (function(){
+        const radios = document.querySelectorAll('input[name="metodo"]');
+        const tarjetaCampos = document.querySelector('.tarjeta-campos');
+        function actualizarVista(){
+            const metodo = document.querySelector('input[name="metodo"]:checked').value;
+            if(metodo === 'tarjeta'){
+            tarjetaCampos.setAttribute('aria-hidden','false');
+            tarjetaCampos.style.display = '';
+            } else {
+            tarjetaCampos.setAttribute('aria-hidden','true');
+            tarjetaCampos.style.display = 'none';
+            }
+        }
+        radios.forEach(r => r.addEventListener('change', actualizarVista));
+        actualizarVista();
+        })();
+    </script>
 </body>
 </html>

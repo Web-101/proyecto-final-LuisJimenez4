@@ -4,8 +4,134 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>|Funciones</title>
+    <link rel="stylesheet" href="../css/funciones.css">
+    <link rel="stylesheet" href="../css/header.css">
 </head>
 <body>
-    
+    <header>
+        <div class="navegacion-multicine">
+            <div class="logo">
+                <img src="../assets/img/multicineLogo.png" alt="Multicine Logo">
+            </div>
+            <nav class="menu-navegacion">
+                <ul>
+                    <li><a href="#" class="activo">Comprar entradas</a></li>
+                    <li><a href="#">CandyBar</a></li>
+                    <li><a href="#">Promociones</a></li>
+                    <li><a href="#">Más de Multicine</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="opciones-usuario">
+            <div class="usuario-ciudad">
+                <div class="ubicacion-icon">
+                    <img src="../assets/icons/ubicacion.svg" alt="Icono de ubicación">
+                </div>
+                <a href="#" class="btn-ciudad">Santa Cruz</a>
+            </div>
+            <div class="multicine-usuario">
+                <div class="compras-icon">
+                    <img src="../assets/icons/carrito.svg" alt="Icono de carrito">
+                </div>
+                <div class="usuario-sesion">
+                    <a href="" class="btn-sesion">Iniciar sesión</a>
+                </div>
+            </div>
+        </div>    
+    </header>
+    <main class="principal" role="main">
+        <section class="detalle-pelicula" aria-labelledby="titulo-pelicula">
+            <div class="columna-imagen">
+                <img src="/assets/poster-placeholder.jpg" alt="Póster de la película" class="poster" />
+            </div>
+
+            <div class="columna-info">
+                <h1 id="titulo-pelicula">TÍTULO DE LA PELÍCULA</h1>
+                <p class="subtitulo" id="duracion-genero">1h 28min · Terror · Suspenso</p>
+
+                <div class="sinopsis" id="sinopsis">
+                    <h2>Sinopsis</h2>
+                    <p>Breve sinopsis de la película. Aquí se muestra un resumen que ayuda al usuario a decidir.</p>
+                </div>
+
+                <div class="meta">
+                    <p><strong>Clasificación:</strong> +16</p>
+                    <p><strong>Director:</strong> Nombre del director</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="filtros-fecha-ubicacion" aria-label="Seleccionar ciudad y fecha">
+            <form class="form-filtros" id="form-filtros" role="form">
+                <label for="ciudad">Ciudad</label>
+                <select id="ciudad" name="ciudad" aria-label="Seleccionar ciudad">
+                <option value="santa-cruz">Santa Cruz</option>
+                <option value="la-paz">La Paz</option>
+                <option value="cochabamba">Cochabamba</option>
+                </select>
+
+                <label for="fecha">Fecha</label>
+                <input id="fecha" name="fecha" type="date" />
+
+                <button type="submit" class="btn-aplicar"><a href="../pantallas/asientos.html">IR A PANTALLA ASIENTOS</a></button>
+            </form>
+        </section>
+
+        <section class="horarios" aria-labelledby="titulo-horarios">
+            <h2 id="titulo-horarios">Horarios disponibles</h2>
+            <!-- Bloque por formato -->
+            <article class="formato" data-formato="2D" aria-labelledby="formato-2d">
+                <h3 id="formato-2d">2D</h3>
+                <div class="lista-horarios" role="list" aria-label="Horarios 2D">
+                    <button class="horario" data-time="12:30" data-cine="multicine-center" data-sala="Sala 1" aria-label="Comprar entrada 12:30">12:30 hrs</button>
+                    <button class="horario" data-time="15:40" data-cine="multicine-center" data-sala="Sala 1" aria-label="Comprar entrada 15:40">15:40 hrs</button>
+                    <button class="horario" data-time="19:00" data-cine="multicine-center" data-sala="Sala 1" aria-label="Comprar entrada 19:00">19:00 hrs</button>
+                </div>
+            </article>
+
+            <article class="formato" data-formato="2D XL" aria-labelledby="formato-2dxl">
+                <h3 id="formato-2dxl">2D XL</h3>
+                <div class="lista-horarios" role="list" aria-label="Horarios 2D XL">
+                    <button class="horario" data-time="17:30" data-cine="multicine-center" data-sala="Sala XL" aria-label="Comprar entrada 17:30">17:30 hrs</button>
+                    <button class="horario" data-time="21:30" data-cine="multicine-center" data-sala="Sala XL" aria-label="Comprar entrada 21:30">21:30 hrs</button>
+                </div>
+            </article>
+
+            <article class="formato" data-formato="3D" aria-labelledby="formato-3d">
+                <h3 id="formato-3d">3D</h3>
+                <div class="lista-horarios" role="list" aria-label="Horarios 3D">
+                    <button class="horario" data-time="14:00" data-cine="multicine-center" data-sala="Sala 3D" aria-label="Comprar entrada 14:00">14:00 hrs</button>
+                    <button class="horario" data-time="20:00" data-cine="multicine-center" data-sala="Sala 3D" aria-label="Comprar entrada 20:00">20:00 hrs</button>
+                </div>
+            </article>
+        </section>
+
+        <aside class="panel-resumen" aria-labelledby="titulo-resumen">
+            <h2 id="titulo-resumen">Tu selección</h2>
+
+            <div class="resumen-item">
+                <p><strong>Película:</strong> <span id="resumen-titulo">TÍTULO DE LA PELÍCULA</span></p>
+                <p><strong>Fecha:</strong> <span id="resumen-fecha">—</span></p>
+                <p><strong>Horario:</strong> <span id="resumen-horario">—</span></p>
+                <p><strong>Sala:</strong> <span id="resumen-sala">—</span></p>
+                <p><strong>Ciudad:</strong> <span id="resumen-ciudad">—</span></p>
+            </div>
+
+            <div class="acciones-resumen">
+                <a id="ir-asientos" class="btn-primario" href="#" role="button" aria-disabled="true">Seleccionar asientos</a>
+            </div>
+        </aside>
+    </main>
+
+    <footer class="pie" role="contentinfo">
+            <div class="contenedor-pie">
+            <nav class="enlaces-pie" aria-label="Enlaces legales">
+                <a href="/aviso-legal.html">Aviso legal</a> ·
+                <a href="/privacidad.html">Política de privacidad</a>
+            </nav>
+            <small>© MULTICINE</small>
+            </div>
+    </footer>
 </body>
 </html>

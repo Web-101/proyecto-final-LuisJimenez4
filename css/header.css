@@ -1,0 +1,86 @@
+header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:16px 64px;
+  border-bottom:1px solid rgba(255,255,255,0.03);
+}
+
+.navegacion-multicine, .opciones-usuario{
+  display:flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content:space-between;
+  gap:48px;
+}
+.logo img{
+  height:44px; display:block; object-fit:contain
+}
+.menu-navegacion ul{
+  display:flex;
+  gap:32px;
+  list-style:none;
+  margin:0;
+  padding:0;
+  align-items:center;
+}
+.menu-navegacion a{
+  color: #D0C6AB;
+  text-decoration:none;
+  font-weight:400;
+  font-size:12px;
+  padding:0;
+}
+.menu-navegacion a.activo{
+  color:#FFEDB2;
+  font-weight: bold;
+  border-bottom: 2px solid #FFEDB2;
+}
+.opciones-usuario{
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+.usuario-ciudad{
+  gap: 10px;
+  padding: 8px 16px;
+  align-items: center;
+  background-color: #6B7280;
+}
+.ubicacion-icon{
+  height: 16px;
+}
+.usuario-ciudad, .usuario-sesion {
+  display:flex;
+  flex-direction: row;
+  padding:8px 16px;
+  border-radius:8px;
+  align-items: center;
+  border:1px solid rgba(255,255,255,0.04);
+}
+.usuario-ciudad .btn-ciudad{
+  color: white;
+  font-weight: 200px;
+  font-size: 12px;
+  text-decoration: none;
+}
+.multicine-usuario{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+.compras-icon{
+  width: 20px;
+  height: 20px;
+}
+.usuario-sesion{
+  background:#F5CF0B;
+}
+.usuario-sesion .btn-sesion{
+  text-decoration: none;
+  font-size: 12px;
+  font-weight:bold;
+  color:#6A5800;
+  border:none;
+}

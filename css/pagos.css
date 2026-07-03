@@ -1,0 +1,66 @@
+:root{
+  --fondo:#0f0f10;
+  --tarjeta:#121214;
+  --amarillo:#ffd54f;
+  --texto:#ffffff;
+  --muted:#bdbdbd;
+  --max:1100px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--fondo);
+  color:var(--texto);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+.contenedor{max-width:var(--max);margin:0 auto;padding:18px}
+
+/* Layout principal */
+.pago-layout{display:grid;grid-template-columns:1fr 360px;gap:20px;padding-top:8px}
+
+/* Formulario */
+.formulario-pago{background:var(--tarjeta);padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.6)}
+.formulario-pago h2{margin:0 0 12px 0}
+.metodo-pago{display:flex;gap:12px;margin-bottom:12px}
+.radio{display:flex;align-items:center;gap:8px;color:var(--texto)}
+.datos-reserva h3{margin-top:6px;margin-bottom:10px}
+.fila{display:flex;gap:12px;margin-bottom:12px}
+.campo{flex:1;display:flex;flex-direction:column}
+.campo label{font-size:0.9rem;color:var(--muted);margin-bottom:6px}
+.campo input, .campo select{
+  padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);
+  background:rgba(255,255,255,0.02);color:var(--texto);
+}
+.ancho-completo{flex-basis:100%}
+
+/* Secciones internas */
+.datos-factura{margin-top:8px;padding-top:8px;border-top:1px solid rgba(255,255,255,0.03)}
+.tarjeta-campos h4{margin:8px 0}
+
+/* Botones */
+.acciones-form{margin-top:14px}
+.boton{
+  display:inline-block;padding:12px 16px;border-radius:10px;border:0;font-weight:700;cursor:pointer;
+}
+.boton.finalizar{background:var(--amarillo);color:#111;width:100%}
+
+/* Resumen lateral */
+.resumen-reserva{position:sticky;top:20px}
+.resumen-card{background:var(--tarjeta);padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.6)}
+.resumen-pelicula{display:flex;gap:12px;align-items:center;margin-bottom:12px}
+.mini-poster{width:64px;height:88px;background:#222;border-radius:6px}
+.titulo-pelicula{margin:0;color:var(--texto)}
+.detalle{color:var(--muted);margin:4px 0}
+.resumen-asientos ul{margin:6px 0 12px 18px;color:var(--texto)}
+.resumen-precio{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-top:1px dashed rgba(255,255,255,0.04);border-bottom:1px dashed rgba(255,255,255,0.04)}
+.nota{margin-top:10px;color:var(--muted);font-size:0.85rem}
+
+/* Responsive */
+@media (max-width:980px){
+  .pago-layout{grid-template-columns:1fr; padding-bottom:30px}
+  .resumen-reserva{position:relative;top:auto;margin-top:12px}
+  .fila{flex-direction:column}
+}

@@ -1,0 +1,124 @@
+:root {
+  --fondo:#0f0f10;
+  --tarjeta:#ffffff;
+  --seleccionado:#ffd54f;
+  --disponible:#2ecc71;
+  --no-disponible:#bdbdbd;
+  --texto:#222;
+  --suave:#666;
+}
+
+body {
+  margin:0;
+  background:var(--fondo);
+  font-family:Arial, sans-serif;
+  color:var(--texto);
+}
+
+.contenedor {
+  max-width:1100px;
+  margin:0 auto;
+  padding:20px;
+}
+.principal {
+  display:grid;
+  grid-template-columns:1fr 300px;
+  gap:20px;
+}
+
+.zona-pantalla {
+  background:var(--tarjeta);
+  padding:15px;
+  border-radius:8px;
+}
+
+.pantalla {
+  text-align:center;
+  background:#111;
+  color:#fff;
+  padding:10px;
+  border-radius:5px;
+  margin-bottom:10px;
+}
+
+.asientos {
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.fila {
+  display:flex;
+  align-items:center;
+}
+
+.etiqueta-fila {
+  width:25px;
+  text-align:center;
+  font-weight:bold;
+}
+
+.grupo-asientos {
+  display:grid;
+  grid-template-columns:repeat(10, 35px);
+  gap:6px;
+  margin-left:10px;
+}
+
+.asiento {
+  border:1px solid #ccc;
+  border-radius:5px;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+.asiento.disponible { background:var(--disponible); color:#fff; }
+.asiento.no-disponible { background:var(--no-disponible); color:#fff; cursor:not-allowed; }
+.asiento.seleccionado { background:var(--seleccionado); color:#111; }
+
+.leyenda {
+  margin-top:10px;
+  display:flex;
+  gap:15px;
+}
+
+.caja {
+  width:15px;
+  height:15px;
+  display:inline-block;
+  border-radius:3px;
+}
+
+.caja.seleccionado { background:var(--seleccionado); }
+.caja.disponible { background:var(--disponible); }
+.caja.no-disponible { background:var(--no-disponible); }
+
+.resumen {
+  background:var(--tarjeta);
+  padding:15px;
+  border-radius:8px;
+}
+
+.titulo-pelicula { margin:0 0 10px 0; }
+
+.precio {
+  display:flex;
+  justify-content:space-between;
+  margin:10px 0;
+}
+
+.acciones {
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.boton {
+  padding:10px;
+  border-radius:5px;
+  border:none;
+  cursor:pointer;
+}
+
+.boton.primario { background:var(--seleccionado); }
+.boton.secundario { background:#eee; }
