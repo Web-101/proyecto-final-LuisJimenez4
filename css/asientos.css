@@ -1,55 +1,49 @@
-:root {
-  --fondo:#0f0f10;
-  --tarjeta:#ffffff;
-  --seleccionado:#ffd54f;
-  --disponible:#2ecc71;
-  --no-disponible:#bdbdbd;
-  --texto:#222;
-  --suave:#666;
-}
-
-body {
-  margin:0;
-  background:var(--fondo);
-  font-family:Arial, sans-serif;
-  color:var(--texto);
-}
-
-.contenedor {
-  max-width:1100px;
-  margin:0 auto;
-  padding:20px;
-}
-.principal {
+main {
   display:grid;
-  grid-template-columns:1fr 300px;
-  gap:20px;
+  grid-template-columns:1.2fr 0.5fr;
+  gap:25px;
 }
-
 .zona-pantalla {
-  background:var(--tarjeta);
+  width: 100%;
   padding:15px;
   border-radius:8px;
 }
-
+.pantalla-asientos{
+  width: 100%;
+}
+.instruccion{
+  display: flex;
+  justify-content: space-between;
+}
+.instruccion .caja-tiempo{
+  display: flex;
+  gap: 8px;
+  background-color: #231F14;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
 .pantalla {
   text-align:center;
   background:#111;
-  color:#fff;
+  color:#999078;
+  font-weight: 600;
   padding:10px;
-  border-radius:5px;
+  border-top-right-radius:200px;
+  border-top-left-radius: 200px;
   margin-bottom:10px;
 }
 
 .asientos {
   display:flex;
   flex-direction:column;
+  align-items: center;
+  padding-bottom: 106px;
   gap:10px;
 }
 
 .fila {
   display:flex;
-  align-items:center;
+  align-items:inherit;
 }
 
 .etiqueta-fila {
@@ -66,20 +60,36 @@ body {
 }
 
 .asiento {
-  border:1px solid #ccc;
+  border:1px solid #999078;
   border-radius:5px;
   cursor:pointer;
-  font-weight:bold;
+  font-size: 16px;
+  font-weight:500;
 }
 
-.asiento.disponible { background:var(--disponible); color:#fff; }
-.asiento.no-disponible { background:var(--no-disponible); color:#fff; cursor:not-allowed; }
-.asiento.seleccionado { background:var(--seleccionado); color:#111; }
+.asiento.disponible, .asiento.no-disponible {
+  color:#EAE2D0
+}
+.asiento.disponible:hover{
+  border: 1px solid  #FFEDB2;
+}
+.asiento.no-disponible{
+  background:#383528;
+  border: none; 
+  color: #4D4732;
+  cursor:not-allowed;
+}
+.asiento.seleccionado {
+  background:#F5CF0B;
+  color:#6A5800;
+  border: 2px solid #F5CF0B;
+}
 
 .leyenda {
-  margin-top:10px;
+  padding: 24px 0px;
+  border-top: 1px solid #4D4732;
   display:flex;
-  gap:15px;
+  gap:32px;
 }
 
 .caja {
@@ -89,36 +99,99 @@ body {
   border-radius:3px;
 }
 
-.caja.seleccionado { background:var(--seleccionado); }
-.caja.disponible { background:var(--disponible); }
-.caja.no-disponible { background:var(--no-disponible); }
-
-.resumen {
-  background:var(--tarjeta);
-  padding:15px;
-  border-radius:8px;
+.caja.seleccionado {
+  background:#F5CF0B;
+}
+.caja.disponible {
+  background:#FFEDB2;
+}
+.caja.no-disponible { 
+  background:#383528;
 }
 
-.titulo-pelicula { margin:0 0 10px 0; }
+* Resumen lateral */
+.resumen-reserva{
+  position:sticky;
+  top:20px
+}
+.titulo-resumen{
+  color: #F5CF0B;
+  font-size: 24px;
+  font-weight: bold;
+}
+.resumen-card{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background:#121214;
+  padding:16px;
+  border-radius:10px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.6)
+}
+.resumen-pelicula, .resumen-asientos, .resumen-funcion, .resumen-entradas{
+  display:flex;
+  flex-direction: column;
+  gap:8px;
+  margin-bottom:12px
+}
+.detalle-pelicula{
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+}
+.mini-poster{
+  width:64px;
+  height:88px;
+  background:#222;
+  border-radius:6px
+}
+.titulo-pelicula{
+  margin:0;
+  color:white
+}
+.detalle{
+  color:#bdbdbd;
+}
+.ubicacion, .entrada-detalle, .asiento-detalle{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  gap: 16px;
+}
 
-.precio {
+.resumen-asientos ul{
+  color:white
+}
+.resumen-precio{
   display:flex;
   justify-content:space-between;
-  margin:10px 0;
+  align-items:center;
+  padding:10px 0;
+  border-top:1px dashed rgba(255,255,255,0.04);
+  border-bottom:1px dashed rgba(255,255,255,0.04)
 }
-
-.acciones {
-  display:flex;
-  flex-direction:column;
-  gap:10px;
+.nota{
+  margin-top:10px;
+  color:#bdbdbd;
+  font-size:0.85rem
 }
-
+.acciones{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
 .boton {
   padding:10px;
   border-radius:5px;
   border:none;
   cursor:pointer;
 }
-
-.boton.primario { background:var(--seleccionado); }
-.boton.secundario { background:#eee; }
+.boton.primario {
+  background:#F5CF0B;
+  color:#6A5800
+}
+.boton.secundario {
+  border: 1px solid white;
+  font-weight: 400;
+}
