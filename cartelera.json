@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "titulo": "Dolly: Juega Conmigo",
+    "descripcion": "Una muñeca misteriosa que cobra vida y aterroriza a una familia.",
+    "poster": "dolly.jpg",
+    "clasificacion": "PG-13",
+    "duracion": "95 min",
+    "genero": ["Terror", "Suspenso"],
+    "funciones": ["14:00", "16:30", "19:00"],
+    "estreno": "2026-07-01"
+  },
+  {
+    "id": 2,
+    "titulo": "Toy Story 5",
+    "descripcion": "Woody y Buzz regresan en una nueva aventura llena de amistad y diversión.",
+    "poster": "toy-story-5.jpg",
+    "clasificacion": "ATP",
+    "duracion": "110 min",
+    "genero": ["Animación", "Comedia", "Aventura"],
+    "funciones": ["15:00", "18:00", "21:00"],
+    "estreno": "2026-07-10"
+  },
+  {
+    "id": 3,
+    "titulo": "Supergirl Legacy",
+    "descripcion": "Kara Zor-El enfrenta un nuevo desafío que pondrá a prueba su legado como heroína.",
+    "poster": "supergirl.jpg",
+    "clasificacion": "PG",
+    "duracion": "120 min",
+    "genero": ["Acción", "Ciencia Ficción"],
+    "funciones": ["13:30", "17:00", "20:30"],
+    "estreno": "2026-07-15"
+  }
+]
