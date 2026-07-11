@@ -1,0 +1,118 @@
+.confirmacion-container { 
+    text-align: center; 
+    padding: 40px 16px; 
+    max-width: 600px; 
+    margin: 0 auto; 
+}
+.icono-exito { 
+    width: 64px; 
+    height: 64px; 
+    background: #ffd54f; 
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    margin: 0 auto 20px; 
+    color: #111; 
+    font-size: 2rem; 
+    font-weight: bold; 
+}
+.titulo-gracias { 
+    font-size: 2.5rem; 
+    font-weight: 800; 
+    margin-bottom: 8px; 
+    color: #ffd54f; 
+}
+.sub-gracias { 
+    color: #bdbdbd;
+    margin-bottom: 40px; 
+}
+.ticket-digital { 
+    background: #17171b; 
+    border-radius: 18px; 
+    padding: 24px; 
+    position: relative; 
+    text-align: left; 
+    box-shadow: 0 8px 24px rgba(0,0,0,0.6); 
+}
+.ticket-header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: start; 
+    border-bottom: 1px dashed rgba(255,255,255,0.1); 
+    padding-bottom: 16px; 
+    margin-bottom: 16px; 
+}
+.ticket-grid { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 16px; 
+    margin-bottom: 24px; 
+}
+.ticket-info-block span { 
+    display: block; 
+    color: #bdbdbd; 
+    font-size: 0.85rem; 
+}
+.ticket-info-block strong { 
+    color: #fff; 
+    font-size: 1rem; 
+}
+.qr-contenedor { 
+    background: white; 
+    padding: 12px; 
+    width: 160px; 
+    height: 160px; 
+    margin: 0 auto 12px; 
+    border-radius: 8px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+.qr-contenedor img { 
+    width: 100%; 
+    height: 100%; 
+}
+.num-orden { 
+    text-align: center; 
+    color: #fff; 
+    font-family: monospace; 
+    font-size: 1.1rem; }
+.ticket-acciones { 
+    display: flex; 
+    gap: 16px; 
+    justify-content: 
+    center; 
+    margin-top: 32px; }
+.btn-pdf { 
+    background: #ffd54f; 
+    color: #111; 
+    padding: 12px 24px; 
+    border-radius: 8px; 
+    font-weight: bold; 
+    display: inline-flex; 
+    align-items: center; 
+    gap: 8px; 
+}
+.btn-volver { 
+    border: 1px solid rgba(255,255,255,0.2); 
+    padding: 12px 24px; 
+    border-radius: 8px; 
+    font-weight: bold; 
+}
+.ayuda-soporte { 
+    margin-top: 24px; 
+    font-size: 0.85rem; 
+    color: #bdbdbd; 
+}
+.ayuda-soporte a { 
+    color: #ffd54f; 
+    font-weight: bold; 
+}
+.aviso-importante{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 32px 0px;
+}

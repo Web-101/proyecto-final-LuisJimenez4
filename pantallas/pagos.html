@@ -45,23 +45,28 @@
             </div>
         </div>    
     </header>
-    <main class="contenedor pago-layout" role="main">
+    <main>
         <!-- Formulario principal -->
         <section class="formulario-pago" aria-labelledby="titulo-pago">
-            <h2 id="titulo-pago">PAGO</h2>
+            <h2 class="titulo-pago">PAGO</h2>
 
-            <!-- Método de pago -->
-            <fieldset class="metodo-pago" aria-label="Método de pago">
-                <legend>Selecciona método de pago</legend>
-                <label class="radio">
-                    <input type="radio" name="metodo" value="tarjeta" checked />
-                    <span>Tarjeta</span>
-                </label>
-                <label class="radio">
-                    <input type="radio" name="metodo" value="qr" />
-                    <span>QR Code</span>
-                </label>
-            </fieldset>
+            <form class="form-metodo-pago">
+                <h3>SELECCIONAR MÉTODO DE PAGO</h3>
+                <div class="metodo-pago">
+                    <input type="radio" id="tarjeta" checked name="metodo" />
+                    <label for="tarjeta" class="opcion">
+                        <img src="../assets/icons/tarjeta-credito.svg" alt="Icono de tarjeta de credito">
+                        <span>Tarjeta</span>
+                    </label>
+
+                    <input type="radio" id="qr" name="metodo"/>
+                    <label for="qr" class="opcion">
+                        <img src="../assets/icons/pagar-qr.svg" alt="Icono de pagar QR">
+                        <span>QR Code</span>
+                    </label>
+                </div>
+            </div>
+            </form>
 
             <!-- Datos de la reserva -->
             <form id="form-pago" class="datos-reserva" autocomplete="on" novalidate>
@@ -113,73 +118,93 @@
             </form>
 
                 <!-- Campos específicos para tarjeta (visibles solo si se elige tarjeta) -->
-                <div class="tarjeta-campos" aria-hidden="false">
+            <form class="tarjeta-campos" aria-hidden="false">
                 <h4>Datos de tarjeta</h4>
                 <div class="fila">
                     <div class="campo">
-                    <label for="numero-tarjeta">Número de tarjeta</label>
-                    <input id="numero-tarjeta" name="numero-tarjeta" type="text" inputmode="numeric" maxlength="19" />
+                        <label for="numero-tarjeta">Número de tarjeta</label>
+                        <input id="numero-tarjeta" name="numero-tarjeta" type="text" inputmode="numeric" maxlength="19" />
                     </div>
                     <div class="campo">
-                    <label for="vencimiento">Vencimiento (MM/AA)</label>
-                    <input id="vencimiento" name="vencimiento" type="text" inputmode="numeric" maxlength="5" placeholder="MM/AA" />
+                        <label for="vencimiento">Vencimiento (MM/AA)</label>
+                        <input id="vencimiento" name="vencimiento" type="text" inputmode="numeric" maxlength="5" placeholder="MM/AA" />
                     </div>
                     <div class="campo">
-                    <label for="cvv">CVV</label>
-                    <input id="cvv" name="cvv" type="password" inputmode="numeric" maxlength="4" />
+                        <label for="cvv">CVV</label>
+                        <input id="cvv" name="cvv" type="password" inputmode="numeric" maxlength="4" />
                     </div>
                 </div>
                 <div class="fila">
                     <div class="campo ancho-completo">
-                    <label for="titular">Nombre del titular</label>
-                    <input id="titular" name="titular" type="text" />
+                        <label for="titular">Nombre del titular</label>
+                        <input id="titular" name="titular" type="text" />
                     </div>
-                </div>
-                </div>
-
-                <!-- Botón principal -->
-                <div class="acciones-form">
-                <button type="submit" class="boton finalizar">FINALIZAR COMPRA</button>
                 </div>
             </form>
         </section>
 
-        <!-- Resumen de la reserva -->
         <aside class="resumen-reserva" aria-labelledby="titulo-resumen">
-        <h3 id="titulo-resumen">TU RESERVA</h3>
-
         <div class="resumen-card">
+            <h3 class="titulo-resumen">TU RESERVA</h3>
             <div class="resumen-pelicula">
-            <div class="mini-poster" aria-hidden="true"></div>
-            <div class="info">
-                <p class="titulo-pelicula"><strong>Dolly: Juega Conmigo</strong></p>
-                <p class="detalle">Multicine Cine Center · Mié, 19 Jun · 19:00</p>
-                <p class="sala">Sala: Sala 5</p>
+                <h2>Película</h2>
+                <div class="detalle-pelicula">
+                    <div class="mini-poster" aria-hidden="true">
+                    <img src="../assets/img/pelicula2.png">
+                </div>
+                <div class="info">
+                    <p class="titulo-pelicula"><strong>Dolly: Juega Conmigo</strong></p>
+                    <p class="formato-pelicula">2D - Doblada</p>
+                </div>
+                </div>
             </div>
+            <div class="resumen-funcion">
+                <h3>Cine, día y horario</h3>
+                <div class="ubicacion">
+                    <img src="../assets/icons/calendario.svg" class="icono" alt="Icono de ubicacion">
+                    <div class="lugar-sala">
+                        <p class="detalle">Cinemark Ventura Mall</p>
+                        <p class="sala">Sala 5</p>
+                        <p class="fecha">Mié, 19 Jun · 19:00</p>
+                    </div>
+                </div>
             </div>
-
+            <div class="resumen-entradas">
+                <h3>Entradas</h3>
+                <div class="entrada-detalle">
+                    <img src="../assets/icons/entrada.svg" alt="Icono de entrada">
+                    <div class="detalles">
+                        <p class="cant-formato">2 • General 2D</p>
+                        <p class="precio-entrada">BS. 70.00</p>
+                    </div>
+                </div>
+            </div>
             <div class="resumen-asientos">
-            <strong>Asientos</strong>
-            <ul id="lista-asientos">
-                <li>F5</li>
-                <li>G1</li>
-            </ul>
+                <h3>Asientos</h3>
+                <div class="asiento-detalle">
+                    <img src="../assets/icons/asiento.svg" alt="Icono de asiento">
+                    <ul id="lista-asientos">
+                        <li>F5</li>
+                        <li>G1</li>
+                    </ul>
+                </div>
             </div>
-
             <div class="resumen-precio">
-            <span class="label">Total a pagar</span>
-            <span class="monto">Bs. <strong>70.00</strong></span>
+                <span class="label">Total a pagar</span>
+                <span class="monto">Bs. <strong>70.00</strong></span>
             </div>
-
+            <div class="acciones-form">
+                <a href="../pantallas/confirmacion.html" class="boton finalizar">FINALIZAR COMPRA</a>
+            </div>
             <div class="nota">
-            <small>Al confirmar, serás redirigido al procesador de pagos seleccionado.</small>
+                <small>Al confirmar, serás redirigido al procesador de pagos seleccionado.</small>
             </div>
         </div>
         </aside>
     </main>
     <footer class="pie">
         <div class="contenedor">
-        <small>© MULTICINE</small>
+            <small>© MULTICINE</small>
         </div>
     </footer>
 

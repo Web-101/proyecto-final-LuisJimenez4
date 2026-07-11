@@ -1,66 +1,195 @@
-:root{
-  --fondo:#0f0f10;
-  --tarjeta:#121214;
-  --amarillo:#ffd54f;
-  --texto:#ffffff;
-  --muted:#bdbdbd;
-  --max:1100px;
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+main {
+  display:grid;
+  grid-template-columns:1fr 360px;
+  gap:20px;
+  padding-top:8px;
+}
+.titulo-pago{
+  font-size: 38px;
+  font-weight: 600;
+}
+.form-metodo-pago {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.metodo-pago{
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+.metodo-pago input[type="radio"] {
+  display: none;
 }
 
-*{box-sizing:border-box}
-body{
-  margin:0;
-  background:var(--fondo);
-  color:var(--texto);
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
+.metodo-pago .opcion {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  gap: 16px;
+  padding: 24px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  font-family: sans-serif;
+  font-size: 20px;
 }
-.contenedor{max-width:var(--max);margin:0 auto;padding:18px}
 
-/* Layout principal */
-.pago-layout{display:grid;grid-template-columns:1fr 360px;gap:20px;padding-top:8px}
-
-/* Formulario */
-.formulario-pago{background:var(--tarjeta);padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.6)}
-.formulario-pago h2{margin:0 0 12px 0}
-.metodo-pago{display:flex;gap:12px;margin-bottom:12px}
-.radio{display:flex;align-items:center;gap:8px;color:var(--texto)}
-.datos-reserva h3{margin-top:6px;margin-bottom:10px}
-.fila{display:flex;gap:12px;margin-bottom:12px}
-.campo{flex:1;display:flex;flex-direction:column}
-.campo label{font-size:0.9rem;color:var(--muted);margin-bottom:6px}
-.campo input, .campo select{
-  padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);
-  background:rgba(255,255,255,0.02);color:var(--texto);
+.opcion .check {
+  display: none;
+  color: yellow;
+  font-weight: bold;
 }
-.ancho-completo{flex-basis:100%}
 
-/* Secciones internas */
-.datos-factura{margin-top:8px;padding-top:8px;border-top:1px solid rgba(255,255,255,0.03)}
-.tarjeta-campos h4{margin:8px 0}
+input[type="radio"]:checked + .opcion {
+  background-color: #444;
+  border: 2px solid yellow;
+}
+
+input[type="radio"]:checked + .opcion .check {
+  display: inline; /* mostramos el check cuando está seleccionado */
+}
+
+.formulario-pago{ 
+  background:#121214;
+  padding:18px;
+  border-radius:10px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.6)
+}
+.formulario-pago h3{
+  font-weight: 500;
+  letter-spacing:0.5px;
+}
+.datos-reserva h3{
+  margin-top:6px;
+  margin-bottom:10px
+}
+.fila{
+  display:flex;
+  gap:12px;
+  margin-bottom:12px
+}
+.campo{
+  flex:1;
+  display:flex;
+  flex-direction:column
+}
+.campo label{
+  font-size:0.9rem;
+  color:#bdbdbd;
+  margin-bottom:6px
+}
+.campo input{
+  padding:19px 16px;
+  font-size: 18px;
+  border-radius:4px;
+  border:1px solid rgba(255,255,255,0.06);
+  background:rgba(255,255,255,0.02);
+  color:white;
+}
+.campo input:hover{
+  border: 1px solid #F5CF0B;
+}
+.ancho-completo{
+  flex-basis:100%
+}
+
+.datos-factura{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-top: 34px;
+  border-top:1px solid rgba(255,255,255,0.03)
+}
+.tarjeta-campos h4{
+  margin:8px 0
+}
 
 /* Botones */
-.acciones-form{margin-top:14px}
-.boton{
-  display:inline-block;padding:12px 16px;border-radius:10px;border:0;font-weight:700;cursor:pointer;
+.acciones-form{
+  margin-top:14px
 }
-.boton.finalizar{background:var(--amarillo);color:#111;width:100%}
+.boton{
+  display:inline-block;
+  padding:12px 16px;
+  border-radius:10px;
+  border:0;
+  font-weight:700;
+  cursor:pointer;
+}
+.boton.finalizar{
+  background:#F5CF0B;
+  text-align: center;
+  color:#111;
+  width:100%
+}
 
-/* Resumen lateral */
-.resumen-reserva{position:sticky;top:20px}
-.resumen-card{background:var(--tarjeta);padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.6)}
-.resumen-pelicula{display:flex;gap:12px;align-items:center;margin-bottom:12px}
-.mini-poster{width:64px;height:88px;background:#222;border-radius:6px}
-.titulo-pelicula{margin:0;color:var(--texto)}
-.detalle{color:var(--muted);margin:4px 0}
-.resumen-asientos ul{margin:6px 0 12px 18px;color:var(--texto)}
-.resumen-precio{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-top:1px dashed rgba(255,255,255,0.04);border-bottom:1px dashed rgba(255,255,255,0.04)}
-.nota{margin-top:10px;color:var(--muted);font-size:0.85rem}
+.resumen-reserva{
+  position:sticky;
+  top:20px
+}
+.titulo-resumen{
+  color: #F5CF0B;
+  font-size: 24px;
+  font-weight: bold;
+}
+.resumen-card{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background:#121214;
+  padding:16px;
+  border-radius:10px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.6)
+}
+.resumen-pelicula, .resumen-asientos, .resumen-funcion, .resumen-entradas{
+  display:flex;
+  flex-direction: column;
+  gap:8px;
+  margin-bottom:12px
+}
+.detalle-pelicula{
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+}
+.mini-poster{
+  width:64px;
+  height:88px;
+  background:#222;
+  border-radius:6px
+}
+.titulo-pelicula{
+  margin:0;
+  color:white
+}
+.detalle{
+  color:#bdbdbd;
+}
+.ubicacion, .entrada-detalle, .asiento-detalle{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  gap: 16px;
+}
 
-/* Responsive */
-@media (max-width:980px){
-  .pago-layout{grid-template-columns:1fr; padding-bottom:30px}
-  .resumen-reserva{position:relative;top:auto;margin-top:12px}
-  .fila{flex-direction:column}
+.resumen-asientos ul{
+  color:white
+}
+.resumen-precio{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 0;
+  border-top:1px dashed rgba(255,255,255,0.04);
+  border-bottom:1px dashed rgba(255,255,255,0.04)
+}
+.nota{
+  margin-top:10px;
+  color:#bdbdbd;
+  font-size:0.85rem
 }
