@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>|Funciones</title>
+    <title>Multicine | Funciones</title>
     <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/funciones.css">
     <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/funciones.css">
 </head>
 <body>
+    <!-- HEADER CORPORATIVO -->
     <header>
         <div class="navegacion-multicine">
             <div class="logo">
@@ -17,8 +18,7 @@
             <nav class="menu-navegacion">
                 <ul>
                     <li><a href="#" class="activo">Comprar entradas</a></li>
-                    <li><a href="#">CandyBar</a></li>
-                    <li><a href="#">Promociones</a></li>
+                    <li><a href="#">Candy Bar</a></li>
                     <li><a href="#">Más de Multicine</a></li>
                 </ul>
             </nav>
@@ -29,7 +29,7 @@
                 <div class="ubicacion-icon">
                     <img src="../assets/icons/ubicacion.svg" alt="Icono de ubicación">
                 </div>
-                <select id="ciudad" name="ciudad">
+                <select id="ciudad-header" name="ciudad">
                     <option value="santa-cruz">Santa Cruz</option>
                     <option value="la-paz">La Paz</option>
                     <option value="cochabamba">Cochabamba</option>
@@ -40,103 +40,153 @@
                     <img src="../assets/icons/carrito.svg" alt="Icono de carrito">
                 </div>
                 <div class="usuario-sesion">
-                    <a href="" class="btn-sesion">Iniciar sesión</a>
+                    <a href="#" class="btn-sesion">Iniciar sesión</a>
                 </div>
             </div>
         </div>    
     </header>
-    <main class="principal" role="main">
-        <section class="detalle-pelicula" aria-labelledby="titulo-pelicula">
-            <div class="columna-imagen">
-                <img src="/assets/poster-placeholder.jpg" alt="Póster de la película" class="poster" />
+
+    <!-- CONTENT LAYOUT (Grid de 2 Columnas según Figma) -->
+    <main class="contenedor-funciones">
+        
+        <!-- COLUMNA IZQUIERDA: Selección de Fecha y Horarios -->
+        <section class="zona-seleccion">
+            
+            <!-- Selector de Fechas tipo Tarjetas Horizontales -->
+            <div class="seccion-fechas">
+                <p class="label-seccion">📅 Seleccione fecha</p>
+                <div class="control-fechas">
+                    <button class="tarjeta-fecha activa">
+                        <span class="dia-semana">vie.</span>
+                        <span class="nro-dia">26</span>
+                        <span class="mes">jun</span>
+                    </button>
+                    <button class="tarjeta-fecha">
+                        <span class="dia-semana">sáb.</span>
+                        <span class="nro-dia">27</span>
+                        <span class="mes">jun</span>
+                    </button>
+                    <button class="tarjeta-fecha">
+                        <span class="dia-semana">dom.</span>
+                        <span class="nro-dia">28</span>
+                        <span class="mes">jun</span>
+                    </button>
+                    <button class="tarjeta-fecha">
+                        <span class="dia-semana">lun.</span>
+                        <span class="nro-dia">29</span>
+                        <span class="mes">jun</span>
+                    </button>
+                    <button class="tarjeta-fecha">
+                        <span class="dia-semana">mar.</span>
+                        <span class="nro-dia">30</span>
+                        <span class="mes">jun</span>
+                    </button>
+                    <button class="tarjeta-fecha">
+                        <span class="dia-semana">mié.</span>
+                        <span class="nro-dia">01</span>
+                        <span class="mes">jul</span>
+                    </button>
+                </div>
             </div>
 
-            <div class="columna-info">
-                <h1 id="titulo-pelicula">TÍTULO DE LA PELÍCULA</h1>
-                <p class="subtitulo" id="duracion-genero">1h 28min · Terror · Suspenso</p>
-
-                <div class="sinopsis" id="sinopsis">
-                    <h2>Sinopsis</h2>
-                    <p>Breve sinopsis de la película. Aquí se muestra un resumen que ayuda al usuario a decidir.</p>
+            <!-- Bloques de Horarios Clasificados por Formato -->
+            <div class="seccion-horarios">
+                
+                <!-- Formato 2D -->
+                <div class="bloque-formato">
+                    <h3>2D</h3>
+                    <div class="grid-horas">
+                        <a href="asientos.html" class="btn-hora">12:30 hrs</a>
+                        <a href="asientos.html" class="btn-hora">13:20 hrs</a>
+                        <a href="asientos.html" class="btn-hora">13:50 hrs</a>
+                        <a href="asientos.html" class="btn-hora">14:20 hrs</a>
+                        <a href="asientos.html" class="btn-hora">14:45 hrs</a>
+                        <a href="asientos.html" class="btn-hora">15:40 hrs</a>
+                        <a href="asientos.html" class="btn-hora">16:10 hrs</a>
+                        <a href="asientos.html" class="btn-hora">16:40 hrs</a>
+                        <a href="asientos.html" class="btn-hora">18:20 hrs</a>
+                        <a href="asientos.html" class="btn-hora">19:00 hrs</a>
+                        <a href="asientos.html" class="btn-hora">20:30 hrs</a>
+                        <a href="asientos.html" class="btn-hora">21:20 hrs</a>
+                        <a href="asientos.html" class="btn-hora">22:40 hrs</a>
+                    </div>
                 </div>
 
-                <div class="meta">
-                    <p><strong>Clasificación:</strong> +16</p>
-                    <p><strong>Director:</strong> Nombre del director</p>
+                <!-- Formato 2D XL -->
+                <div class="bloque-formato">
+                    <h3>2D XL</h3>
+                    <div class="grid-horas">
+                        <a href="asientos.html" class="btn-hora">12:50 hrs</a>
+                        <a href="asientos.html" class="btn-hora">15:15 hrs</a>
+                        <a href="asientos.html" class="btn-hora">17:30 hrs</a>
+                        <a href="asientos.html" class="btn-hora">19:50 hrs</a>
+                        <a href="asientos.html" class="btn-hora">22:10 hrs</a>
+                    </div>
+                </div>
+
+                <!-- Formato 3D -->
+                <div class="bloque-formato">
+                    <h3>3D</h3>
+                    <div class="grid-horas">
+                        <a href="asientos.html" class="btn-hora">17:50 hrs</a>
+                        <a href="asientos.html" class="btn-hora">20:00 hrs</a>
+                        <a href="asientos.html" class="btn-hora">22:15 hrs</a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="filtros-fecha-ubicacion" aria-label="Seleccionar ciudad y fecha">
-            <form class="form-filtros" id="form-filtros" role="form">
-                <label for="ciudad">Ciudad</label>
-                <select id="ciudad" name="ciudad" aria-label="Seleccionar ciudad">
-                <option value="santa-cruz">Santa Cruz</option>
-                <option value="la-paz">La Paz</option>
-                <option value="cochabamba">Cochabamba</option>
-                </select>
-
-                <label for="fecha">Fecha</label>
-                <input id="fecha" name="fecha" type="date" />
-
-                <button type="submit" class="btn-aplicar"><a href="../pantallas/asientos.html">IR A PANTALLA ASIENTOS</a></button>
-            </form>
-        </section>
-
-        <section class="horarios" aria-labelledby="titulo-horarios">
-            <h2 id="titulo-horarios">Horarios disponibles</h2>
-            <!-- Bloque por formato -->
-            <article class="formato" data-formato="2D" aria-labelledby="formato-2d">
-                <h3 id="formato-2d">2D</h3>
-                <div class="lista-horarios" role="list" aria-label="Horarios 2D">
-                    <button class="horario" data-time="12:30" data-cine="multicine-center" data-sala="Sala 1" aria-label="Comprar entrada 12:30">12:30 hrs</button>
-                    <button class="horario" data-time="15:40" data-cine="multicine-center" data-sala="Sala 1" aria-label="Comprar entrada 15:40">15:40 hrs</button>
-                    <button class="horario" data-time="19:00" data-cine="multicine-center" data-sala="Sala 1" aria-label="Comprar entrada 19:00">19:00 hrs</button>
-                </div>
-            </article>
-
-            <article class="formato" data-formato="2D XL" aria-labelledby="formato-2dxl">
-                <h3 id="formato-2dxl">2D XL</h3>
-                <div class="lista-horarios" role="list" aria-label="Horarios 2D XL">
-                    <button class="horario" data-time="17:30" data-cine="multicine-center" data-sala="Sala XL" aria-label="Comprar entrada 17:30">17:30 hrs</button>
-                    <button class="horario" data-time="21:30" data-cine="multicine-center" data-sala="Sala XL" aria-label="Comprar entrada 21:30">21:30 hrs</button>
-                </div>
-            </article>
-
-            <article class="formato" data-formato="3D" aria-labelledby="formato-3d">
-                <h3 id="formato-3d">3D</h3>
-                <div class="lista-horarios" role="list" aria-label="Horarios 3D">
-                    <button class="horario" data-time="14:00" data-cine="multicine-center" data-sala="Sala 3D" aria-label="Comprar entrada 14:00">14:00 hrs</button>
-                    <button class="horario" data-time="20:00" data-cine="multicine-center" data-sala="Sala 3D" aria-label="Comprar entrada 20:00">20:00 hrs</button>
-                </div>
-            </article>
-        </section>
-
-        <aside class="panel-resumen" aria-labelledby="titulo-resumen">
-            <h2 id="titulo-resumen">Tu selección</h2>
-
-            <div class="resumen-item">
-                <p><strong>Película:</strong> <span id="resumen-titulo">TÍTULO DE LA PELÍCULA</span></p>
-                <p><strong>Fecha:</strong> <span id="resumen-fecha">—</span></p>
-                <p><strong>Horario:</strong> <span id="resumen-horario">—</span></p>
-                <p><strong>Sala:</strong> <span id="resumen-sala">—</span></p>
-                <p><strong>Ciudad:</strong> <span id="resumen-ciudad">—</span></p>
+        <!-- COLUMNA DERECHA: Información de la Película -->
+        <aside class="zona-pelicula-info">
+            <div class="contenedor-poster">
+                <img src="../assets/img/pelicula1.png" alt="Dolly: Juega conmigo" class="poster-pelicula">
             </div>
+            
+            <div class="detalles-metrajes">
+                <h1 class="peli-titulo">DOLLY: JUEGA CONMIGO</h1>
+                <div class="peli-badges">
+                    <span class="badge-info"><img src="../assets/icons/duracion.svg" alt=""> 1H 25M</span>
+                    <span class="badge-censura">1P</span>
+                </div>
+                
+                <div class="peli-generos">
+                    <span class="tag-genero">Terror</span>
+                    <span class="tag-genero">Suspenso</span>
+                </div>
 
-            <div class="acciones-resumen">
-                <a id="ir-asientos" class="btn-primario" href="#" role="button" aria-disabled="true">Seleccionar asientos</a>
+                <p class="peli-sinopsis">
+                    Tras la repentina muerte de su madre, una joven regresa a la antigua y apartada mansión familiar. Al explorar el desván, descubre una inquietante muñeca de porcelana que perteneció a su abuela. Pronto, inexplicables sucesos comienzan a aterrorizar la casa, revelando que Dolly no es solo un juguete, sino un recipiente de un antiguo mal que exige jugar un juego mortal.
+                </p>
+
+                <button class="btn-trailer">
+                    <img src="../assets/icons/play.svg" alt=""> Reproducir tráiler
+                </button>
             </div>
         </aside>
     </main>
 
-    <footer class="pie" role="contentinfo">
-            <div class="contenedor-pie">
-            <nav class="enlaces-pie" aria-label="Enlaces legales">
-                <a href="/aviso-legal.html">Aviso legal</a> ·
-                <a href="/privacidad.html">Política de privacidad</a>
-            </nav>
-            <small>© MULTICINE</small>
+    <!-- FOOTER EXTENDIDO CORPORATIVO -->
+    <footer class="footer-corporativo">
+        <div class="footer-contenido">
+            <div class="footer-marca">
+                <h2>Multicine</h2>
+                <p class="copyright">© 2026 Multicine. Reservados todos los derechos.</p>
             </div>
+            <div class="footer-links-col">
+                <a href="#">Comprar Entradas</a>
+                <a href="#">Promociones</a>
+                <a href="#">Eventos</a>
+            </div>
+            <div class="footer-links-col">
+                <a href="#">Sobre nosotros</a>
+                <a href="#">Corporativo</a>
+                <a href="#">Publicidad</a>
+            </div>
+            <div class="footer-links-col">
+                <a href="#">Términos y condiciones</a>
+                <a href="#">Política De Privacidad</a>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
