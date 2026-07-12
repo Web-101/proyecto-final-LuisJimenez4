@@ -1,0 +1,12 @@
+{
+  "name": "proyectofinalweb-backend",
+  "version": "1.0.0",
+  "description": "Backend de la cartelera de cine (Node.js + Express)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
