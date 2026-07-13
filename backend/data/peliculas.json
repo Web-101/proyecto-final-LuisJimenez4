@@ -48,5 +48,14 @@
       "16:30",
       "19:30"
     ]
+  },
+  {
+    "id": 5,
+    "titulo": "Nueva",
+    "poster": "x.png",
+    "descripcion": "desc",
+    "genero": "Drama",
+    "duracion": 100,
+    "funciones": []
   }
 ]
