@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "titulo": "Dolly: Juega Conmigo",
+    "poster": "pelicula1.png",
+    "descripcion": "Una niña recibe una muñeca antigua que esconde un secreto aterrador.",
+    "genero": "Terror",
+    "duracion": 95,
+    "funciones": [
+      "16:00",
+      "19:00",
+      "21:30"
+    ]
+  },
+  {
+    "id": 2,
+    "titulo": "Corazón de Acero",
+    "poster": "pelicula2.png",
+    "descripcion": "Un expiloto debe volver a la acción para detener una conspiración global.",
+    "genero": "Acción",
+    "duracion": 118,
+    "funciones": [
+      "17:15",
+      "20:00"
+    ]
+  },
+  {
+    "id": 3,
+    "titulo": "Risas en el Andén",
+    "poster": "pelicula3.png",
+    "descripcion": "Una comedia sobre un grupo de amigos que pierde el último tren a casa.",
+    "genero": "Comedia",
+    "duracion": 102,
+    "funciones": [
+      "15:30",
+      "18:45",
+      "21:00"
+    ]
+  },
+  {
+    "id": 4,
+    "titulo": "El Último Faro",
+    "poster": "pelicula4.png",
+    "descripcion": "Un guardafaros descubre una verdad que cambiará el destino de su pueblo.",
+    "genero": "Drama",
+    "duracion": 110,
+    "funciones": [
+      "16:30",
+      "19:30"
+    ]
+  }
+]
