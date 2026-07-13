@@ -1,9 +1,11 @@
 [
   {
     "id": 1,
-    "titulo": "Dolly: Juega Conmigo",
+    "titulo": "Backrooms",
     "poster": "pelicula1.png",
-    "descripcion": "Una niña recibe una muñeca antigua que esconde un secreto aterrador.",
+    "clasificacion": "14+",
+    "formato": "2D",
+    "descripcion": "Una misteriosa puerta aparece en el sótano de una tienda de muebles y conduce a un universo paralelo de pasillos infinitos y oficinas vacías. Un paciente desaparece tras cruzarla y su terapeuta se adentra en este laberinto opresivo para rescatarlo, enfrentándose a entidades invisibles y espacios que desafían la lógica.",
     "genero": "Terror",
     "duracion": 95,
     "funciones": [
@@ -14,9 +16,11 @@
   },
   {
     "id": 2,
-    "titulo": "Corazón de Acero",
+    "titulo": "El día de la revelación",
     "poster": "pelicula2.png",
-    "descripcion": "Un expiloto debe volver a la acción para detener una conspiración global.",
+    "clasificacion": "TP",
+    "formato": "3D",
+    "descripcion": "En un mundo al borde de la Tercera Guerra Mundial, un experto en ciberseguridad roba archivos que prueban contactos humanos con extraterrestres. Paralelamente, una meteoróloga comienza a manifestar habilidades psíquicas tras un extraño incidente. Ambos se convierten en piezas clave para revelar la verdad sobre la vida alienígena, mientras una corporación secreta intenta ocultar el hallazgo.",
     "genero": "Acción",
     "duracion": 118,
     "funciones": [
@@ -26,10 +30,12 @@
   },
   {
     "id": 3,
-    "titulo": "Risas en el Andén",
+    "titulo": "Evil Dead en llamas",
     "poster": "pelicula3.png",
-    "descripcion": "Una comedia sobre un grupo de amigos que pierde el último tren a casa.",
-    "genero": "Comedia",
+    "clasificacion": "14+",
+    "formato": "2D SUB",
+    "descripcion": "Alice, tras la muerte de su esposo, busca consuelo en la casa de sus suegros. Lo que comienza como un duelo familiar se convierte en pesadilla cuando los miembros de la familia son poseídos por los Deadites, demonios invocados por el Necronomicón.",
+    "genero": "Terror",
     "duracion": 102,
     "funciones": [
       "15:30",
@@ -39,9 +45,11 @@
   },
   {
     "id": 4,
-    "titulo": "El Último Faro",
+    "titulo": "La Odisea",
     "poster": "pelicula4.png",
-    "descripcion": "Un guardafaros descubre una verdad que cambiará el destino de su pueblo.",
+    "clasificacion": "14+",
+    "formato": "2D",
+    "descripcion": " Adaptación épica del poema de Homero. Odiseo (Matt Damon) emprende un largo viaje de regreso a Ítaca tras la Guerra de Troya, enfrentándose a criaturas míticas como el cíclope Polifemo, las sirenas y la hechicera Circe. Su objetivo es reunirse con Penélope y recuperar su hogar, mientras desafía a dioses caprichosos y supera pruebas que ponen a prueba su ingenio y resistencia.",
     "genero": "Drama",
     "duracion": 110,
     "funciones": [
@@ -51,11 +59,17 @@
   },
   {
     "id": 5,
-    "titulo": "Nueva",
-    "poster": "x.png",
-    "descripcion": "desc",
-    "genero": "Drama",
-    "duracion": 100,
-    "funciones": []
+    "titulo": "Scary Movie",
+    "poster": "pelicula5.png",
+    "clasificacion": "TP",
+    "formato": "2D XL",
+    "descripcion": "Cindy Campbell y sus amigos Ray, Shorty y Brenda se reencuentran cuando el asesino Ghostface reaparece.",
+    "genero": "Comedia",
+    "duracion": 124,
+    "funciones": [
+      "14:45",
+      "18:00",
+      "21:15"
+    ]
   }
 ]

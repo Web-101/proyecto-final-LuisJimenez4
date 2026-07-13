@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "numeroOrden": "MC-0001-BOL",
+    "fecha": "2026-07-13T04:22:58.278Z",
+    "peliculaId": 2,
+    "titulo": "El día de la revelación",
+    "clasificacion": "TP",
+    "formato": "3D",
+    "hora": "20:00",
+    "asientos": [
+      "F5",
+      "G1"
+    ],
+    "total": 70,
+    "metodoPago": "tarjeta",
+    "cliente": {
+      "nombre": "Luis",
+      "apellido": "Jimenez",
+      "documento": "1234567",
+      "celular": "70000000",
+      "email": "luis@test.com"
+    }
+  },
+  {
+    "id": 2,
+    "numeroOrden": "MC-0002-BOL",
+    "fecha": "2026-07-13T04:24:47.339Z",
+    "peliculaId": 1,
+    "titulo": "Backrooms",
+    "clasificacion": "14+",
+    "formato": "2D",
+    "hora": "19:00",
+    "asientos": [
+      "E4"
+    ],
+    "total": 35,
+    "metodoPago": "qr",
+    "cliente": {
+      "nombre": "Luis",
+      "apellido": "Jimenez",
+      "documento": "423432",
+      "celular": "54325345",
+      "email": "luchito@example.com"
+    }
+  }
+]

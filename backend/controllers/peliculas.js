@@ -12,9 +12,15 @@ function guardarPeliculas(peliculas) {
   fs.writeFileSync(DATA_PATH, JSON.stringify(peliculas, null, 2));
 }
 
+const FORMATOS_VALIDOS = ['2D', '2D XL', '3D', '2D SUB'];
+
 function validarPelicula(datos) {
   const errores = [];
-  const { titulo, poster, descripcion, genero, duracion, funciones } = datos;
+  const { titulo, poster, descripcion, genero, duracion, funciones, formato } = datos;
+
+  if (formato !== undefined && !FORMATOS_VALIDOS.includes(formato)) {
+    errores.push(`El campo "formato" debe ser uno de: ${FORMATOS_VALIDOS.join(', ')}.`);
+  }
 
   if (typeof titulo !== 'string' || titulo.trim() === '') {
     errores.push('El campo "titulo" es obligatorio y debe ser un texto.');
@@ -48,6 +54,23 @@ function obtenerPeliculas(req, res) {
   res.json(peliculas);
 }
 
+// GET /api/cartelera/:id
+function obtenerPelicula(req, res) {
+  const id = Number(req.params.id);
+  if (!Number.isInteger(id)) {
+    return res.status(400).json({ error: 'El id debe ser un número entero.' });
+  }
+
+  const peliculas = leerPeliculas();
+  const pelicula = peliculas.find((p) => p.id === id);
+
+  if (!pelicula) {
+    return res.status(404).json({ error: `No existe una película con id ${id}.` });
+  }
+
+  res.json(pelicula);
+}
+
 // POST /api/cartelera
 function agregarPelicula(req, res) {
   const errores = validarPelicula(req.body);
@@ -65,6 +88,7 @@ function agregarPelicula(req, res) {
     descripcion: req.body.descripcion.trim(),
     genero: req.body.genero.trim(),
     duracion: req.body.duracion,
+    formato: req.body.formato ?? '2D',
     funciones: req.body.funciones ?? [],
   };
 
@@ -97,7 +121,7 @@ function eliminarPelicula(req, res) {
 const ESTADOS_ASIENTO = ['disponible', 'ocupado', 'seleccionado'];
 const PROBABILIDADES = [0.6, 0.3, 0.1]; // disponible / ocupado / seleccionado
 const FILAS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
-const ASIENTOS_POR_FILA = 10;
+const ASIENTOS_POR_FILA = 8;
 
 function elegirEstadoAleatorio() {
   const azar = Math.random();
@@ -139,6 +163,7 @@ function obtenerAsientos(req, res) {
 
 module.exports = {
   obtenerPeliculas,
+  obtenerPelicula,
   agregarPelicula,
   eliminarPelicula,
   obtenerAsientos,
