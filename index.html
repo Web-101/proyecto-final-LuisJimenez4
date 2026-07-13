@@ -48,42 +48,42 @@
         </div>    
     </header>
     <main>
+        <!-- Carrusel de películas en cartelera (js/app.js) -->
         <section class="pelicula-destacada">
-        <div class="destacada-contenido">
-            <div class="texto-estreno">
-                <span class="badge-estreno">ESTRENO DE LA SEMANA</span>
-            </div>
-            <div class="destacada-info">
-                <span class="destacada-titulo">DOLLY: JUEGA CONMIGO</span>
-                <div class="cajas">
-                    <div class="caja-duracion">
-                        <img src="assets/icons/duracion.svg" alt="Icono de duración">
-                        <span class="duracion">1h 35m</span>
-                    </div>
-                    <div class="caja-clasificacion">
-                        <span class="clasificacion">14+</span>
-                    </div>
-                    <div class="caja-genero">
-                        <span class="genero">Terror / Suspenso</span>
-                    </div>
+            <button class="carrusel-btn carrusel-prev" aria-label="Película anterior">&#10094;</button>
+            <div class="destacada-contenido">
+                <div class="texto-estreno">
+                    <span class="badge-estreno">EN CARTELERA</span>
                 </div>
-                <p class="destacada-sinopsis">
-                    Un grupo de amigos libera accidentalmente una entidad demoníaca atrapada en una muñeca de porcelana. Ahora, deberán sobrevivir a una noche de juegos mortales donde cada movimiento podría ser el último.
-                </p>
-            </div>
-
-            <div class="destacada-botones">
-                <div class="btn-comprar-entrada">
-                    <img src="assets/icons/entrada.svg" alt="Icono de entrada">
-                    <a href="pantallas/funciones.html" class="btn-comprar">IR A PANTALLA FUNCIONES</a>
+                <div class="destacada-info">
+                    <span class="destacada-titulo"></span>
+                    <div class="cajas">
+                        <div class="caja-duracion">
+                            <img src="assets/icons/duracion.svg" alt="Icono de duración">
+                            <span class="duracion"></span>
+                        </div>
+                        <div class="caja-clasificacion">
+                            <span class="clasificacion"></span>
+                        </div>
+                        <div class="caja-genero">
+                            <span class="genero"></span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="btn-reproducir-trailer">
-                    <img src="assets/icons/play.svg" alt="Icono de play">
-                    <a href="#">Reproducir tráiler</a>
+                <div class="destacada-botones">
+                    <div class="btn-comprar-entrada">
+                        <img src="assets/icons/entrada.svg" alt="Icono de entrada">
+                        <a href="#" class="btn-comprar">Comprar entradas</a>
+                    </div>
+
+                    <div class="btn-reproducir-trailer">
+                        <img src="assets/icons/play.svg" alt="Icono de play">
+                        <a href="#">Reproducir tráiler</a>
+                    </div>
                 </div>
             </div>
-        </div>
+            <button class="carrusel-btn carrusel-next" aria-label="Película siguiente">&#10095;</button>
         </section>
 
         <section class="seccion-cartelera">
@@ -98,42 +98,8 @@
                 </div>
             </div>
 
-            <div class="peliculas-cartelera">
-                <article class="tarjeta-pelicula">
-                    <div class="poster-contenedor">
-                        <img src="assets/img/pelicula1.png" alt="Película 1">
-                        <span class="badge-edad">14+</span>
-                    </div>
-                </article>
-
-                <article class="tarjeta-pelicula">
-                    <div class="poster-contenedor">
-                        <img src="assets/img/pelicula2.png" alt="Película 2">
-                        <span class="badge-edad">TP</span>
-                    </div>
-                </article>
-
-                <article class="tarjeta-pelicula">
-                    <div class="poster-contenedor">
-                        <img src="assets/img/pelicula3.png" alt="Película 3">
-                        <span class="badge-edad">14+</span>
-                    </div>
-                </article>
-
-                <article class="tarjeta-pelicula">
-                    <div class="poster-contenedor">
-                        <img src="assets/img/pelicula4.png" alt="Película 4">
-                        <span class="badge-edad">14+</span>
-                    </div>
-                </article>
-
-                <article class="tarjeta-pelicula">
-                    <div class="poster-contenedor">
-                        <img src="assets/img/pelicula5.png" alt="Película 5">
-                        <span class="badge-edad">TP</span>
-                    </div>
-                </article>
-            </div>
+            <!-- Las tarjetas se generan dinámicamente desde /api/cartelera (js/app.js) -->
+            <div class="peliculas-cartelera"></div>
         </section>
 
         <section class="seccion-preventas">
@@ -142,47 +108,8 @@
                 <a href="#" class="enlace-ver-todos">Ver todos &gt;</a>
             </div>
 
-            <div class="peliculas-preventas">
-                <article class="tarjeta-preventa">
-                    <div class="poster-contenedor">
-                        <img src="assets/img/estreno1.png" alt="Supergirl: Legacy">
-                    </div>
-                    <div class="info-preventa">
-                        <h3>Supergirl: Legacy</h3>
-                        <p class="fecha-estreno">25 Junio, 2026</p>
-                    </div>
-                </article>
-
-                <article class="tarjeta-preventa">
-                    <div class="poster-contenedor">
-                        <img src="assets/img/estreno2.png" alt="Toy Story 5">
-                    </div>
-                    <div class="info-preventa">
-                        <h3>Toy Story 5</h3>
-                        <p class="fecha-estreno">15 Julio, 2026</p>
-                    </div>
-                </article>
-
-                <article class="tarjeta-preventa">
-                    <div class="poster-contenedor">
-                        <img src="assets/img/estreno3.png" alt="Moana">
-                    </div>
-                    <div class="info-preventa">
-                        <h3>Moana</h3>
-                        <p class="fecha-estreno">20 Agosto, 2026</p>
-                    </div>
-                </article>
-
-                <article class="tarjeta-preventa">
-                    <div class="poster-contenedor">
-                        <img src="assets/img/estreno4.png" alt="Minions & Monstruos">
-                    </div>
-                    <div class="info-preventa">
-                        <h3>Minions &amp; Monstruos</h3>
-                        <p class="fecha-estreno">12 Septiembre, 2026</p>
-                    </div>
-                </article>
-            </div>
+            <!-- Las preventas se generan dinámicamente desde /api/preventas (js/app.js) -->
+            <div class="peliculas-preventas"></div>
         </section>
 
         <section class="contenedor-columnas-promo">
@@ -252,5 +179,7 @@
             <p>&copy; 2026 Multicine. Reservados todos los derechos.</p>
         </div>
     </footer>
+    <script src="js/app.js" defer></script>
+    <script src="js/carrito.js" defer></script>
 </body>
 </html>

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,9 +55,9 @@
       <div class="ticket-header">
         <div>
           <span>PELÍCULA</span>
-          <h2 style="font-weight: bold; font-size: 1.3rem;">Dolly: Juega Conmigo</h2>
+          <h2 id="ticket-pelicula" style="font-weight: bold; font-size: 1.3rem;">Dolly: Juega Conmigo</h2>
         </div>
-        <span style="border: 1px solid #666; padding: 2px 6px; border-radius: 4px; font-size: 0.8rem;">14+</span>
+        <span id="ticket-clasificacion" style="border: 1px solid #666; padding: 2px 6px; border-radius: 4px; font-size: 0.8rem;">14+</span>
       </div>
 
       <div class="ticket-grid">
@@ -68,15 +67,15 @@
         </div>
         <div class="ticket-info-block">
           <span>SALA</span>
-          <strong>Sala 5 - Digital</strong>
+          <strong id="ticket-sala">Sala 5 - Digital</strong>
         </div>
         <div class="ticket-info-block">
           <span>FECHA Y HORA</span>
-          <strong>Hoy, 20:30 hrs</strong>
+          <strong id="ticket-fecha">Hoy, 20:30 hrs</strong>
         </div>
         <div class="ticket-info-block">
           <span>ASIENTOS</span>
-          <strong>F5, G1</strong>
+          <strong id="ticket-asientos">F5, G1</strong>
         </div>
       </div>
 
@@ -84,7 +83,7 @@
         <div class="qr-contenedor">
           <img src="../assets/img/QR-simulacion.png" alt="Código QR de la reserva">
         </div>
-        <p class="num-orden">NÚMERO DE ORDEN<br><strong>#MC-8829-BOL</strong></p>
+        <p class="num-orden">NÚMERO DE ORDEN<br><strong id="ticket-orden">#MC-8829-BOL</strong></p>
       </div>
     </section>
     <div class="aviso-importante">
@@ -147,5 +146,7 @@
             <p>&copy; 2026 Multicine. Reservados todos los derechos.</p>
         </div>
     </footer>
+    <script src="../js/confirmacion.js" defer></script>
+    <script src="../js/carrito.js" defer></script>
 </body>
 </html>

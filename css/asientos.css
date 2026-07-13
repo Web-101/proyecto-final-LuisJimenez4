@@ -54,7 +54,7 @@ main {
 
 .grupo-asientos {
   display:grid;
-  grid-template-columns:repeat(10, 35px);
+  grid-template-columns:repeat(8, 42px);
   gap:6px;
   margin-left:10px;
 }
@@ -63,8 +63,9 @@ main {
   border:1px solid #999078;
   border-radius:5px;
   cursor:pointer;
-  font-size: 16px;
-  font-weight:500;
+  font-size: 13px;
+  font-weight:600;
+  padding:9px 0;
 }
 
 .asiento.disponible, .asiento.no-disponible {

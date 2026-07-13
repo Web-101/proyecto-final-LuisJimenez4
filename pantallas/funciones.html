@@ -89,49 +89,12 @@
                 </div>
             </div>
 
-            <!-- Bloques de Horarios Clasificados por Formato -->
+            <!-- Horarios generados dinámicamente desde /api/cartelera/:id (js/funciones.js);
+                 el título del bloque muestra el formato de la película (2D, 2D XL, 3D, 2D SUB) -->
             <div class="seccion-horarios">
-                
-                <!-- Formato 2D -->
                 <div class="bloque-formato">
                     <h3>2D</h3>
-                    <div class="grid-horas">
-                        <a href="asientos.html" class="btn-hora">12:30 hrs</a>
-                        <a href="asientos.html" class="btn-hora">13:20 hrs</a>
-                        <a href="asientos.html" class="btn-hora">13:50 hrs</a>
-                        <a href="asientos.html" class="btn-hora">14:20 hrs</a>
-                        <a href="asientos.html" class="btn-hora">14:45 hrs</a>
-                        <a href="asientos.html" class="btn-hora">15:40 hrs</a>
-                        <a href="asientos.html" class="btn-hora">16:10 hrs</a>
-                        <a href="asientos.html" class="btn-hora">16:40 hrs</a>
-                        <a href="asientos.html" class="btn-hora">18:20 hrs</a>
-                        <a href="asientos.html" class="btn-hora">19:00 hrs</a>
-                        <a href="asientos.html" class="btn-hora">20:30 hrs</a>
-                        <a href="asientos.html" class="btn-hora">21:20 hrs</a>
-                        <a href="asientos.html" class="btn-hora">22:40 hrs</a>
-                    </div>
-                </div>
-
-                <!-- Formato 2D XL -->
-                <div class="bloque-formato">
-                    <h3>2D XL</h3>
-                    <div class="grid-horas">
-                        <a href="asientos.html" class="btn-hora">12:50 hrs</a>
-                        <a href="asientos.html" class="btn-hora">15:15 hrs</a>
-                        <a href="asientos.html" class="btn-hora">17:30 hrs</a>
-                        <a href="asientos.html" class="btn-hora">19:50 hrs</a>
-                        <a href="asientos.html" class="btn-hora">22:10 hrs</a>
-                    </div>
-                </div>
-
-                <!-- Formato 3D -->
-                <div class="bloque-formato">
-                    <h3>3D</h3>
-                    <div class="grid-horas">
-                        <a href="asientos.html" class="btn-hora">17:50 hrs</a>
-                        <a href="asientos.html" class="btn-hora">20:00 hrs</a>
-                        <a href="asientos.html" class="btn-hora">22:15 hrs</a>
-                    </div>
+                    <div class="grid-horas"></div>
                 </div>
             </div>
         </section>
@@ -188,5 +151,7 @@
             </div>
         </div>
     </footer>
+    <script src="../js/funciones.js" defer></script>
+    <script src="../js/carrito.js" defer></script>
 </body>
 </html>

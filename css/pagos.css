@@ -69,13 +69,16 @@ input[type="radio"]:checked + .opcion .check {
 }
 .fila{
   display:flex;
+  flex-wrap:wrap;
   gap:12px;
   margin-bottom:12px
 }
 .campo{
-  flex:1;
+  /* base de 150px: si no caben en la fila, los campos bajan a la línea siguiente */
+  flex:1 1 150px;
   display:flex;
-  flex-direction:column
+  flex-direction:column;
+  min-width:0;
 }
 .campo label{
   font-size:0.9rem;
@@ -83,6 +86,8 @@ input[type="radio"]:checked + .opcion .check {
   margin-bottom:6px
 }
 .campo input{
+  width:100%;
+  min-width:0; /* permite que el input se encoja dentro del flex */
   padding:19px 16px;
   font-size: 18px;
   border-radius:4px;
@@ -106,6 +111,16 @@ input[type="radio"]:checked + .opcion .check {
 }
 .tarjeta-campos h4{
   margin:8px 0
+}
+
+.campo input.input-error{
+  border:1px solid #E5484D;
+}
+.mensaje-pago{
+  color:#E5484D;
+  margin-top:10px;
+  font-size:14px;
+  font-weight:600;
 }
 
 /* Botones */
@@ -192,4 +207,14 @@ input[type="radio"]:checked + .opcion .check {
   margin-top:10px;
   color:#bdbdbd;
   font-size:0.85rem
+}
+
+/* Ventanas angostas: el resumen pasa debajo del formulario */
+@media (max-width: 900px){
+  main{
+    grid-template-columns:1fr;
+  }
+  .resumen-reserva{
+    position:static;
+  }
 }

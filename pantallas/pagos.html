@@ -53,19 +53,39 @@
             <form class="form-metodo-pago">
                 <h3>SELECCIONAR MÉTODO DE PAGO</h3>
                 <div class="metodo-pago">
-                    <input type="radio" id="tarjeta" checked name="metodo" />
+                    <input type="radio" id="tarjeta" checked name="metodo" value="tarjeta" />
                     <label for="tarjeta" class="opcion">
                         <img src="../assets/icons/tarjeta-credito.svg" alt="Icono de tarjeta de credito">
                         <span>Tarjeta</span>
                     </label>
 
-                    <input type="radio" id="qr" name="metodo"/>
+                    <input type="radio" id="qr" name="metodo" value="qr"/>
                     <label for="qr" class="opcion">
                         <img src="../assets/icons/pagar-qr.svg" alt="Icono de pagar QR">
                         <span>QR Code</span>
                     </label>
                 </div>
-            </div>
+            </form>
+
+            <!-- Campos específicos para tarjeta (visibles solo si se elige tarjeta) -->
+            <form class="tarjeta-campos" aria-hidden="true" style="display:none">
+                <h3>DATOS DE TARJETA</h3>
+                <div class="fila">
+                    <div class="campo">
+                        <input id="numero-tarjeta" name="numero-tarjeta" type="text" inputmode="numeric" maxlength="19" placeholder="NRO Tarjeta*"/>
+                    </div>
+                    <div class="campo">
+                        <input id="vencimiento" name="vencimiento" type="text" inputmode="numeric" maxlength="5" placeholder="MM/AA*"/>
+                    </div>
+                    <div class="campo">
+                        <input id="cvv" name="cvv" type="password" inputmode="numeric" maxlength="4" placeholder="CVV*"/>
+                    </div>
+                </div>
+                <div class="fila">
+                    <div class="campo ancho-completo">
+                        <input id="titular" name="titular" type="text" placeholder="Nombre del titular*"/>
+                    </div>
+                </div>
             </form>
 
             <!-- Datos de la reserva -->
@@ -117,44 +137,21 @@
                 </div>
             </form>
 
-                <!-- Campos específicos para tarjeta (visibles solo si se elige tarjeta) -->
-            <form class="tarjeta-campos" aria-hidden="false">
-                <h4>Datos de tarjeta</h4>
-                <div class="fila">
-                    <div class="campo">
-                        <label for="numero-tarjeta">Número de tarjeta</label>
-                        <input id="numero-tarjeta" name="numero-tarjeta" type="text" inputmode="numeric" maxlength="19" />
-                    </div>
-                    <div class="campo">
-                        <label for="vencimiento">Vencimiento (MM/AA)</label>
-                        <input id="vencimiento" name="vencimiento" type="text" inputmode="numeric" maxlength="5" placeholder="MM/AA" />
-                    </div>
-                    <div class="campo">
-                        <label for="cvv">CVV</label>
-                        <input id="cvv" name="cvv" type="password" inputmode="numeric" maxlength="4" />
-                    </div>
-                </div>
-                <div class="fila">
-                    <div class="campo ancho-completo">
-                        <label for="titular">Nombre del titular</label>
-                        <input id="titular" name="titular" type="text" />
-                    </div>
-                </div>
-            </form>
         </section>
 
         <aside class="resumen-reserva" aria-labelledby="titulo-resumen">
         <div class="resumen-card">
             <h3 class="titulo-resumen">TU RESERVA</h3>
+            <!-- El resumen se rellena con la reserva real (js/pagos.js); sin datos hardcodeados -->
             <div class="resumen-pelicula">
                 <h2>Película</h2>
                 <div class="detalle-pelicula">
                     <div class="mini-poster" aria-hidden="true">
-                    <img src="../assets/img/pelicula2.png">
+                    <img src="" alt="" hidden>
                 </div>
                 <div class="info">
-                    <p class="titulo-pelicula"><strong>Dolly: Juega Conmigo</strong></p>
-                    <p class="formato-pelicula">2D - Doblada</p>
+                    <p class="titulo-pelicula"><strong>—</strong></p>
+                    <p class="formato-pelicula"></p>
                 </div>
                 </div>
             </div>
@@ -163,9 +160,9 @@
                 <div class="ubicacion">
                     <img src="../assets/icons/calendario.svg" class="icono" alt="Icono de ubicacion">
                     <div class="lugar-sala">
-                        <p class="detalle">Cinemark Ventura Mall</p>
-                        <p class="sala">Sala 5</p>
-                        <p class="fecha">Mié, 19 Jun · 19:00</p>
+                        <p class="detalle"></p>
+                        <p class="sala"></p>
+                        <p class="fecha">—</p>
                     </div>
                 </div>
             </div>
@@ -174,8 +171,8 @@
                 <div class="entrada-detalle">
                     <img src="../assets/icons/entrada.svg" alt="Icono de entrada">
                     <div class="detalles">
-                        <p class="cant-formato">2 • General 2D</p>
-                        <p class="precio-entrada">BS. 70.00</p>
+                        <p class="cant-formato">0 • General</p>
+                        <p class="precio-entrada">BS. 0.00</p>
                     </div>
                 </div>
             </div>
@@ -184,17 +181,17 @@
                 <div class="asiento-detalle">
                     <img src="../assets/icons/asiento.svg" alt="Icono de asiento">
                     <ul id="lista-asientos">
-                        <li>F5</li>
-                        <li>G1</li>
+                        <li>—</li>
                     </ul>
                 </div>
             </div>
             <div class="resumen-precio">
                 <span class="label">Total a pagar</span>
-                <span class="monto">Bs. <strong>70.00</strong></span>
+                <span class="monto">Bs. <strong>0.00</strong></span>
             </div>
             <div class="acciones-form">
-                <a href="../pantallas/confirmacion.html" class="boton finalizar">FINALIZAR COMPRA</a>
+                <button type="button" id="btn-finalizar" class="boton finalizar">FINALIZAR COMPRA</button>
+                <p id="msg-pago" class="mensaje-pago"></p>
             </div>
             <div class="nota">
                 <small>Al confirmar, serás redirigido al procesador de pagos seleccionado.</small>
@@ -208,24 +205,7 @@
         </div>
     </footer>
 
-    <script>
-        // Comportamiento mínimo: alternar campos según método de pago
-        (function(){
-        const radios = document.querySelectorAll('input[name="metodo"]');
-        const tarjetaCampos = document.querySelector('.tarjeta-campos');
-        function actualizarVista(){
-            const metodo = document.querySelector('input[name="metodo"]:checked').value;
-            if(metodo === 'tarjeta'){
-            tarjetaCampos.setAttribute('aria-hidden','false');
-            tarjetaCampos.style.display = '';
-            } else {
-            tarjetaCampos.setAttribute('aria-hidden','true');
-            tarjetaCampos.style.display = 'none';
-            }
-        }
-        radios.forEach(r => r.addEventListener('change', actualizarVista));
-        actualizarVista();
-        })();
-    </script>
+    <script src="../js/pagos.js" defer></script>
+    <script src="../js/carrito.js" defer></script>
 </body>
 </html>
